@@ -1,0 +1,4 @@
+/* App-level overrides if needed */
+.app main {
+  min-height: 60vh;
+}

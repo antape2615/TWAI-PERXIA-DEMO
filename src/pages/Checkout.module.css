@@ -1,0 +1,171 @@
+.wrapper {
+  padding: 0 0 2rem;
+}
+
+.wrapper h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+  color: var(--text);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addressOption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.addressOption:has(input:checked) {
+  border-color: var(--primary);
+  background: rgba(180, 83, 9, 0.06);
+}
+
+.addressLabel {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.addressText {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.selectedSummary {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.noAddress {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.noAddress a {
+  color: var(--primary);
+}
+
+.orderSummary {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 2rem;
+}
+
+.orderSummary h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.orderList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.orderLine {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.orderTotals {
+  margin-top: 1rem;
+}
+
+.orderRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.orderTotal {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.authRequired,
+.empty,
+.success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.authRequired h2,
+.empty h2,
+.success h2 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.authRequired p,
+.empty p,
+.success p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+}
+
+.loginLink,
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
