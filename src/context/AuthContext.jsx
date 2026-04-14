@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useCallback } from 'react';
-import { validateUser } from '../data/users';
 
 const AuthContext = createContext(null);
 
@@ -13,14 +12,28 @@ export function AuthProvider({ children }) {
     }
   });
 
-  const login = useCallback((email, password) => {
-    const found = validateUser(email, password);
-    if (found) {
-      setUser(found);
-      localStorage.setItem('catalog_user', JSON.stringify(found));
-      return { ok: true };
+  const [loading, setLoading] = useState(false);
+
+  const login = useCallback(async (email, password) => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (data.ok && data.user) {
+        setUser(data.user);
+        localStorage.setItem('catalog_user', JSON.stringify(data.user));
+        return { ok: true };
+      }
+      return { ok: false, error: data.error || 'Email o contraseña incorrectos' };
+    } catch (err) {
+      return { ok: false, error: 'Error de conexión al servidor' };
+    } finally {
+      setLoading(false);
     }
-    return { ok: false, error: 'Email o contraseña incorrectos' };
   }, []);
 
   const logout = useCallback(() => {
@@ -36,7 +49,7 @@ export function AuthProvider({ children }) {
   }, [user]);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateAddresses }}>
+    <AuthContext.Provider value={{ user, login, logout, updateAddresses, loading }}>
       {children}
     </AuthContext.Provider>
   );

@@ -7,15 +7,15 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login } = useAuth();
+  const { login, loading } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const from = searchParams.get('from') || '/';
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    const result = login(email, password);
+    const result = await login(email, password);
     if (result.ok) {
       navigate(from, { replace: true });
     } else {
@@ -28,7 +28,7 @@ export default function Login() {
       <div className={styles.card}>
         <h1>Iniciar sesión</h1>
         <p className={styles.demoHint}>
-          Demo: usa <strong>demo@cocina.com</strong> / <strong>demo123</strong>
+          Ingresa con tu cuenta registrada
         </p>
         <form onSubmit={handleSubmit} className={styles.form}>
           <label className={styles.label}>
@@ -56,12 +56,12 @@ export default function Login() {
             />
           </label>
           {error && <p className={styles.error}>{error}</p>}
-          <button type="submit" className={styles.submitBtn}>
-            Entrar
+          <button type="submit" className={styles.submitBtn} disabled={loading}>
+            {loading ? 'Verificando...' : 'Entrar'}
           </button>
         </form>
         <p className={styles.footer}>
-          Catálogo de demostración. No se guardan datos reales.
+          Catálogo en línea — Tus datos están protegidos.
         </p>
       </div>
     </div>
