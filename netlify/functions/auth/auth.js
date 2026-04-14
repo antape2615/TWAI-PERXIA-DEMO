@@ -1,10 +1,4 @@
-/**
- * Netlify Function — auth
- *
- * POST /api/auth/login   — Validate email+password against MongoDB
- * GET  /api/auth/users   — List users (emails only, for testing)
- */
-import { MongoClient } from "mongodb";
+const { MongoClient } = require("mongodb");
 
 const MONGO_URI = process.env.MONGODB_URI ||
   "mongodb+srv://Evalia:85IXjeMPtpB7OqW9@evalia.pjj2kzb.mongodb.net/catalogo-demo?retryWrites=true&w=majority&appName=EVALIA";
@@ -34,7 +28,7 @@ function json(statusCode, body) {
   };
 }
 
-export async function handler(event) {
+exports.handler = async function (event) {
   if (event.httpMethod === "OPTIONS") {
     return json(204, {});
   }
@@ -43,7 +37,6 @@ export async function handler(event) {
     .replace("/.netlify/functions/auth", "")
     .replace("/api/auth", "");
 
-  // POST /login
   if (event.httpMethod === "POST" && (path === "/login" || path === "" || path === "/")) {
     try {
       const { email, password } = JSON.parse(event.body || "{}");
@@ -79,7 +72,6 @@ export async function handler(event) {
     }
   }
 
-  // GET /users
   if (event.httpMethod === "GET" && path === "/users") {
     try {
       const col = await getCollection();
@@ -95,4 +87,4 @@ export async function handler(event) {
   }
 
   return json(404, { error: "Not found" });
-}
+};
