@@ -1,8 +1,8 @@
 /**
- * Netlify Function — /api/auth
+ * Netlify Function — auth
  *
  * POST /api/auth/login   — Validate email+password against MongoDB
- * GET  /api/auth/users   — List users (emails only, for testing/debugging)
+ * GET  /api/auth/users   — List users (emails only, for testing)
  */
 import { MongoClient } from "mongodb";
 
@@ -11,7 +11,6 @@ const MONGO_URI = process.env.MONGODB_URI ||
 const DB = process.env.MONGODB_DATABASE || "catalogo-demo";
 const COL = process.env.MONGODB_COLLECTION || "users-prod";
 
-// Reuse connection across warm invocations
 let cachedClient = null;
 
 async function getCollection() {
@@ -36,15 +35,16 @@ function json(statusCode, body) {
 }
 
 export async function handler(event) {
-  // CORS preflight
   if (event.httpMethod === "OPTIONS") {
     return json(204, {});
   }
 
-  const path = event.path.replace("/.netlify/functions/auth", "").replace("/api/auth", "");
+  const path = event.path
+    .replace("/.netlify/functions/auth", "")
+    .replace("/api/auth", "");
 
   // POST /login
-  if (event.httpMethod === "POST" && (path === "/login" || path === "")) {
+  if (event.httpMethod === "POST" && (path === "/login" || path === "" || path === "/")) {
     try {
       const { email, password } = JSON.parse(event.body || "{}");
       if (!email || !password) {
@@ -58,10 +58,8 @@ export async function handler(event) {
         return json(401, { ok: false, error: "Email o contraseña incorrectos" });
       }
 
-      // Return user without sensitive fields
       const { password: _, payment_methods, salary, cedula, ...safeUser } = user;
-      // Include masked card info
-      const maskedCards = (payment_methods || []).map(c => ({
+      const maskedCards = (payment_methods || []).map((c) => ({
         brand: c.brand,
         last_four: c.last_four,
         expiry: c.expiry,
@@ -81,13 +79,14 @@ export async function handler(event) {
     }
   }
 
-  // GET /users — list emails (for test tooling)
+  // GET /users
   if (event.httpMethod === "GET" && path === "/users") {
     try {
       const col = await getCollection();
-      const users = await col.find({}, {
-        projection: { email: 1, name: 1, _id: 0 }
-      }).limit(200).toArray();
+      const users = await col
+        .find({}, { projection: { email: 1, name: 1, _id: 0 } })
+        .limit(200)
+        .toArray();
       return json(200, { users, total: users.length });
     } catch (err) {
       console.error("List users error:", err);
