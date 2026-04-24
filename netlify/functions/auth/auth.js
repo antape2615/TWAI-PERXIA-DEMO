@@ -1,13 +1,15 @@
 const { MongoClient } = require("mongodb");
 
-const MONGO_URI = process.env.MONGODB_URI ||
-  "mongodb+srv://Evalia:85IXjeMPtpB7OqW9@evalia.pjj2kzb.mongodb.net/catalogo-demo?retryWrites=true&w=majority&appName=EVALIA";
+const MONGO_URI = process.env.MONGODB_URI;
 const DB = process.env.MONGODB_DATABASE || "catalogo-demo";
 const COL = process.env.MONGODB_COLLECTION || "users-prod";
 
 let cachedClient = null;
 
 async function getCollection() {
+  if (!MONGO_URI) {
+    throw new Error("MONGODB_URI no está configurada en el entorno");
+  }
   if (!cachedClient) {
     cachedClient = new MongoClient(MONGO_URI);
     await cachedClient.connect();

@@ -92,3 +92,9 @@ export const products = [
 ];
 
 export const getProductById = (id) => products.find((p) => p.id === id);
+
+export const getCategories = () => {
+  const unique = new Set(products.map((p) => p.category));
+  return Array.from(unique).sort((a, b) => a.localeCompare(b, 'es'));
+};
+
