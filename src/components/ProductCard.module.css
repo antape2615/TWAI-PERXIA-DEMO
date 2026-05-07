@@ -1,4 +1,6 @@
 .card {
+  --card-accent: #00c73d;
+  --card-accent-hover: #00a332;
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
@@ -43,7 +45,7 @@
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--card-accent);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -60,22 +62,22 @@
   margin: 0.5rem 1rem 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--card-accent);
 }
 
 .addBtn {
   margin: 1rem;
   padding: 0.65rem 1rem;
-  background: var(--primary);
+  background: var(--card-accent);
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: filter 0.2s;
+  transition: background-color 0.2s;
 }
 
 .addBtn:hover {
-  filter: brightness(1.1);
+  background: var(--card-accent-hover);
 }

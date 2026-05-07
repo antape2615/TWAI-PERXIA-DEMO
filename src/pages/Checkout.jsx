@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { getProductById } from '../data/products';
+import { logInventoryChange } from '../utils/inventoryAudit';
 import { formatCOP } from '../utils/currency';
 import CardPaymentForm from '../components/CardPaymentForm';
 import styles from './Checkout.module.css';
@@ -25,6 +26,11 @@ export default function Checkout() {
   const selectedAddress = user?.addresses?.find((a) => a.id === selectedAddressId);
 
   const handlePaymentSuccess = () => {
+    const actor = user?.email ?? 'guest';
+    lines.forEach(({ productId, product, quantity }) => {
+      const newStock = Math.max(0, product.stock - quantity);
+      logInventoryChange(productId, product.stock, newStock, 'venta_simulada', actor);
+    });
     setPaymentDone(true);
     clearCart();
   };

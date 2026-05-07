@@ -1,3 +1,5 @@
+import { validateProductsArray } from '../utils/productValidator.js';
+
 export const products = [
   {
     id: '1',
@@ -89,6 +91,29 @@ export const products = [
     description: '6 niveles de tostado, bandeja extraíble, función descongelar.',
     stock: 22,
   },
+  {
+    id: '11',
+    name: 'Set de Utensilios de Cocina de Acero Inoxidable',
+    price: 249000,
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=400',
+    category: 'Utensilios',
+    description: 'Set completo de 12 piezas en acero inoxidable 18/10 de alta calidad.',
+    stock: 45,
+    rating: 4.8,
+    reviews: 156,
+    features: [
+      'Acero inoxidable 18/10',
+      'Resistente al calor',
+      'Apto lavavajillas',
+      'Garantía 5 años',
+    ],
+  },
 ];
+
+const validationResult = validateProductsArray(products);
+if (!validationResult.valid) {
+  console.error('Error en datos de productos:', validationResult.errors);
+  throw new Error('Datos de productos inválidos');
+}
 
 export const getProductById = (id) => products.find((p) => p.id === id);

@@ -40,6 +40,19 @@ export default function ProductDetail() {
           <h1>{product.name}</h1>
           <p className={styles.price}>{formatCOP(product.price)}</p>
           <p className={styles.description}>{product.description}</p>
+          {typeof product.rating === 'number' && (
+            <p className={styles.meta}>
+              Valoración: {product.rating.toFixed(1)}
+              {typeof product.reviews === 'number' ? ` · ${product.reviews} opiniones` : null}
+            </p>
+          )}
+          {Array.isArray(product.features) && product.features.length > 0 && (
+            <ul className={styles.features}>
+              {product.features.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          )}
           <p className={styles.stock}>Disponibles: {product.stock}</p>
           <button type="button" onClick={handleAdd} className={styles.addBtn}>
             Añadir al carrito

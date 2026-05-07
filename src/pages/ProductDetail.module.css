@@ -71,6 +71,19 @@
   margin: 0;
 }
 
+.meta {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.features {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 .stock {
   font-size: 0.9rem;
   color: var(--text-muted);
