@@ -26,9 +26,9 @@ export default function Login() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
-        <h1>Iniciar sesión</h1>
+        <h1>Inicia sesión en PerxiaStore</h1>
         <p className={styles.demoHint}>
-          Ingresa con tu cuenta registrada
+          Accede a tu cuenta de PerxiaStore para continuar comprando
         </p>
         <form onSubmit={handleSubmit} className={styles.form}>
           <label className={styles.label}>
@@ -61,7 +61,7 @@ export default function Login() {
           </button>
         </form>
         <p className={styles.footer}>
-          Catálogo en línea — Tus datos están protegidos.
+          PerxiaStore — Tus datos están protegidos.
         </p>
       </div>
     </div>

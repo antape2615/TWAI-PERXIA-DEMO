@@ -70,7 +70,7 @@ export default function Checkout() {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Checkout</h1>
+      <h1>Finalizar compra en PerxiaStore</h1>
       <div className={styles.content}>
         <div className={styles.sections}>
           <section className={styles.section}>

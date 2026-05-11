@@ -11,8 +11,8 @@ export default function Catalog() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <h1>Catálogo de cocina</h1>
-        <p>Encuentra sartenes, ollas, electrodomésticos y más para tu cocina.</p>
+        <h1>Catálogo de Productos</h1>
+        <p>Bienvenido a PerxiaStore - Tu tienda online de confianza</p>
       </header>
       <CatalogFilters
         filters={filters}

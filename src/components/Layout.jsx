@@ -17,7 +17,7 @@ export default function Layout({ children }) {
     <div className={styles.wrapper}>
       <header className={styles.header}>
         <Link to="/" className={styles.logo}>
-          CocinaStore
+          PerxiaStore
         </Link>
         <nav className={styles.nav}>
           <Link to="/">Catálogo</Link>
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        <p>CocinaStore — Catálogo de demostración. Pago simulado, no real.</p>
+        <p>&copy; 2024 PerxiaStore. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

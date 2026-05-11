@@ -1,17 +1,20 @@
 .card {
-  --card-accent: #00c73d;
-  --card-accent-hover: #00a332;
-  background: var(--card-bg);
+  --card-accent: var(--primary);
+  --card-accent-hover: var(--primary-dark);
+  background: var(--bg-light);
+  border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.1);
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s, background-color 0.2s;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+  background-color: var(--bg-lighter);
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
   transform: translateY(-2px);
 }
 

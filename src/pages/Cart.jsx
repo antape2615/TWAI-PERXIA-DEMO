@@ -19,7 +19,7 @@ export default function Cart() {
     return (
       <div className={styles.empty}>
         <h2>Tu carrito está vacío</h2>
-        <p>Añade productos desde el catálogo.</p>
+        <p>Continúa comprando en PerxiaStore.</p>
         <Link to="/" className={styles.cta}>
           Ver catálogo
         </Link>
@@ -29,7 +29,7 @@ export default function Cart() {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Carrito</h1>
+      <h1>Tu carrito de compras - PerxiaStore</h1>
       <div className={styles.content}>
         <ul className={styles.list}>
           {lines.map(({ productId, product, quantity }) => (

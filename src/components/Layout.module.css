@@ -9,7 +9,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: var(--header-bg);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -93,8 +94,9 @@
 .footer {
   padding: 1rem 2rem;
   text-align: center;
-  background: var(--footer-bg);
-  color: var(--text-muted);
+  background: var(--bg-lighter);
+  border-top: 1px solid var(--border);
+  color: var(--secondary);
   font-size: 0.85rem;
 }
 
