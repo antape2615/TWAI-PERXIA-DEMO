@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
@@ -13,6 +13,24 @@ export function AuthProvider({ children }) {
   });
 
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const syncUserFromStorage = () => {
+      try {
+        const saved = localStorage.getItem('catalog_user');
+        setUser(saved ? JSON.parse(saved) : null);
+      } catch {
+        setUser(null);
+      }
+    };
+
+    window.addEventListener('storage', syncUserFromStorage);
+    window.addEventListener('focus', syncUserFromStorage);
+    return () => {
+      window.removeEventListener('storage', syncUserFromStorage);
+      window.removeEventListener('focus', syncUserFromStorage);
+    };
+  }, []);
 
   const login = useCallback(async (email, password) => {
     setLoading(true);

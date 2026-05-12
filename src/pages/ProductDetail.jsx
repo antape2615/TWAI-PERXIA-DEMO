@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getProductById } from '../data/products';
 import { useCart } from '../context/CartContext';
 import { formatCOP } from '../utils/currency';
+import { cssClass } from '../utils/cssClass';
 import styles from './ProductDetail.module.css';
 
 export default function ProductDetail() {
@@ -28,7 +29,7 @@ export default function ProductDetail() {
 
   return (
     <div className={styles.wrapper}>
-      <button type="button" onClick={() => navigate(-1)} className={styles.backLink}>
+      <button type="button" onClick={() => navigate('/')} className={styles.backLink}>
         ← Volver
       </button>
       <article className={styles.article}>
@@ -54,7 +55,7 @@ export default function ProductDetail() {
             </ul>
           )}
           <p className={styles.stock}>Disponibles: {product.stock}</p>
-          <button type="button" onClick={handleAdd} className={styles.addBtn}>
+          <button type="button" onClick={handleAdd} className={cssClass(styles.addBtn, 'addBtn')}>
             Añadir al carrito
           </button>
         </div>

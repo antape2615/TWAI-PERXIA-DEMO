@@ -6,6 +6,7 @@ import { getProductById } from '../data/products';
 import { logInventoryChange } from '../utils/inventoryAudit';
 import { formatCOP } from '../utils/currency';
 import CardPaymentForm from '../components/CardPaymentForm';
+import { cssClass } from '../utils/cssClass';
 import styles from './Checkout.module.css';
 
 export default function Checkout() {
@@ -37,7 +38,7 @@ export default function Checkout() {
 
   if (!user) {
     return (
-      <div className={styles.authRequired}>
+      <div className={cssClass(styles.authRequired, 'authRequired')}>
         <h2>Inicia sesión para continuar</h2>
         <p>Necesitas una cuenta para realizar la compra.</p>
         <Link to={`/login?from=${encodeURIComponent('/checkout')}`} className={styles.loginLink}>

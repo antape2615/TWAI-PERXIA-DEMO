@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { cssClass } from '../utils/cssClass';
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -55,7 +56,7 @@ export default function Login() {
               className={styles.input}
             />
           </label>
-          {error && <p className={styles.error}>{error}</p>}
+          {error && <p className={cssClass(styles.error, 'error')}>{error}</p>}
           <button type="submit" className={styles.submitBtn} disabled={loading}>
             {loading ? 'Verificando...' : 'Entrar'}
           </button>

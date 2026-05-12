@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import { cssClass } from '../utils/cssClass';
 import styles from './Layout.module.css';
 
 export default function Layout({ children }) {
@@ -25,16 +26,16 @@ export default function Layout({ children }) {
             <>
               <Link to="/cuenta">Mi cuenta</Link>
               <Link to="/carrito" className={styles.cartLink}>
-                Carrito {count > 0 && <span className={styles.badge}>{count}</span>}
+                Carrito {count > 0 && <span className={cssClass(styles.badge, 'badge')}>{count}</span>}
               </Link>
-              <button type="button" onClick={handleLogout} className={styles.logoutBtn}>
+              <button type="button" onClick={handleLogout} className={cssClass(styles.logoutBtn, 'logoutBtn')}>
                 Cerrar sesión
               </button>
             </>
           ) : (
             <>
               <Link to="/carrito" className={styles.cartLink}>
-                Carrito {count > 0 && <span className={styles.badge}>{count}</span>}
+                Carrito {count > 0 && <span className={cssClass(styles.badge, 'badge')}>{count}</span>}
               </Link>
               <Link to="/login" className={styles.loginBtn}>
                 Iniciar sesión

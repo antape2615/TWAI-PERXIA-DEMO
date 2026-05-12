@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { formatCOP } from '../utils/currency';
+import { cssClass } from '../utils/cssClass';
 import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
@@ -12,7 +13,7 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <article className={styles.card}>
+    <article className={cssClass(styles.card, 'card')}>
       <Link to={`/producto/${product.id}`} className={styles.link}>
         <div className={styles.imageWrap}>
           <img src={product.image} alt={product.name} className={styles.image} />
@@ -21,7 +22,7 @@ export default function ProductCard({ product }) {
         <h3 className={styles.name}>{product.name}</h3>
         <p className={styles.price}>{formatCOP(product.price)}</p>
       </Link>
-      <button type="button" onClick={handleAdd} className={styles.addBtn}>
+      <button type="button" onClick={handleAdd} className={cssClass(styles.addBtn, 'addBtn')}>
         Añadir al carrito
       </button>
     </article>

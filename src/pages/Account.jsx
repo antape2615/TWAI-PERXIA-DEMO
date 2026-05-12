@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AddressForm from '../components/AddressForm';
+import { cssClass } from '../utils/cssClass';
 import styles from './Account.module.css';
 
 export default function Account() {
@@ -36,9 +37,9 @@ export default function Account() {
   return (
     <div className={styles.wrapper}>
       <h1>Mi cuenta</h1>
-      <p className={styles.email}>{user.email}</p>
+      <p className={cssClass(styles.email, 'email')}>{user.email}</p>
 
-      <section className={styles.section}>
+      <section className={cssClass(styles.section, 'section')}>
         <div className={styles.sectionHeader}>
           <h2>Direcciones</h2>
           {!adding && !editingId && (

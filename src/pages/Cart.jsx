@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { getProductById } from '../data/products';
 import { formatCOP } from '../utils/currency';
+import { cssClass } from '../utils/cssClass';
 import styles from './Cart.module.css';
 
 export default function Cart() {
@@ -61,7 +62,7 @@ export default function Cart() {
                   <button
                     type="button"
                     onClick={() => removeFromCart(productId)}
-                    className={styles.removeBtn}
+                    className={cssClass(styles.removeBtn, 'removeBtn')}
                   >
                     Quitar
                   </button>
@@ -73,7 +74,7 @@ export default function Cart() {
             </li>
           ))}
         </ul>
-        <aside className={styles.summary}>
+        <aside className={cssClass(styles.summary, 'summary')}>
           <h3>Resumen</h3>
           <div className={styles.summaryRow}>
             <span>Subtotal</span>
