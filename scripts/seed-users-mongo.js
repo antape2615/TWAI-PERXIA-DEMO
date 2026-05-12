@@ -191,6 +191,14 @@ async function main() {
     const result = await col.insertMany(users);
     console.log(`✅ ${result.insertedCount} usuarios insertados en ${DB}.${COL}`);
 
+    const { DEMO_USER } = await import("./ensure-demo-user.js");
+    await col.updateOne(
+      { email: DEMO_USER.email },
+      { $set: DEMO_USER },
+      { upsert: true },
+    );
+    console.log(`✅ Usuario demo asegurado: ${DEMO_USER.email}`);
+
     // Print a few samples
     console.log("\n--- Primeros 5 usuarios (para probar login) ---");
     for (const u of users.slice(0, 5)) {
