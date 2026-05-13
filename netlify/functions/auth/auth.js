@@ -1,6 +1,9 @@
 const { MongoClient } = require("mongodb");
 
-const MONGO_URI = process.env.MONGODB_URI ||
+// Netlify / Atlas: acepta MONGODB_URI o MONGO_URI (nombre que a veces se usa en el panel).
+const MONGO_URI =
+  process.env.MONGODB_URI ||
+  process.env.MONGO_URI ||
   "mongodb+srv://Evalia:85IXjeMPtpB7OqW9@evalia.pjj2kzb.mongodb.net/catalogo-demo?retryWrites=true&w=majority&appName=EVALIA";
 const DB = process.env.MONGODB_DATABASE || "catalogo-demo";
 const COL = process.env.MONGODB_COLLECTION || "users-prod";
