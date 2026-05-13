@@ -1,9 +1,11 @@
+// Imágenes: Wikimedia Commons (uso conforme a sus licencias por archivo).
 export const products = [
   {
     id: '1',
     name: 'Juego de Sartenes Antiadherente',
     price: 359000,
-    image: 'https://picsum.photos/seed/cocina-sartenes/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hahn_29cm_Frying_Pan.jpg/500px-Hahn_29cm_Frying_Pan.jpg',
     category: 'Sartenes',
     description: 'Set de 3 sartenes de aluminio con recubrimiento antiadherente, aptas para inducción.',
     stock: 15,
@@ -12,7 +14,8 @@ export const products = [
     id: '2',
     name: 'Batidora de Pie Profesional',
     price: 519000,
-    image: 'https://picsum.photos/seed/cocina-batidora/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/White_KitchenAid_mixer_%28KSM150PSWH%29.jpg/500px-White_KitchenAid_mixer_%28KSM150PSWH%29.jpg',
     category: 'Electrodomésticos',
     description: '1000W, 5 velocidades + turbo, bowl de acero inoxidable 4.8L.',
     stock: 8,
@@ -21,7 +24,8 @@ export const products = [
     id: '3',
     name: 'Cuchillos de Cocina Japoneses',
     price: 639000,
-    image: 'https://picsum.photos/seed/cocina-cuchillos/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chef%27s_knife.jpg/500px-Chef%27s_knife.jpg',
     category: 'Cuchillos',
     description: 'Set de 5 piezas en acero inoxidable VG-10, mango ergonómico.',
     stock: 12,
@@ -30,7 +34,8 @@ export const products = [
     id: '4',
     name: 'Olla a Presión Eléctrica',
     price: 319000,
-    image: 'https://picsum.photos/seed/cocina-olla-presion/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pressure_cooker.jpg/500px-Pressure_cooker.jpg',
     category: 'Ollas',
     description: '6L, panel digital, 11 programas, cocción rápida y segura.',
     stock: 20,
@@ -39,7 +44,8 @@ export const products = [
     id: '5',
     name: 'Tabla de Cortar Bambú',
     price: 139000,
-    image: 'https://picsum.photos/seed/cocina-tabla/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cutting_board.jpg/500px-Cutting_board.jpg',
     category: 'Utensilios',
     description: '40x30 cm, antibacteriana, con canal para jugos.',
     stock: 30,
@@ -48,7 +54,7 @@ export const products = [
     id: '6',
     name: 'Cafetera Espresso Manual',
     price: 279000,
-    image: 'https://picsum.photos/seed/cocina-cafetera/400/400',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Moka_pot.jpg/500px-Moka_pot.jpg',
     category: 'Café',
     description: 'Moka italiana 6 tazas, aluminio, estufa e inducción.',
     stock: 25,
@@ -57,7 +63,8 @@ export const products = [
     id: '7',
     name: 'Set de Batería de Cocina',
     price: 799000,
-    image: 'https://picsum.photos/seed/cocina-bateria/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/All-Clad_Copper_Core_pots.jpeg/500px-All-Clad_Copper_Core_pots.jpeg',
     category: 'Ollas',
     description: '12 piezas en acero inoxidable 18/10, incluye tapas y mangos.',
     stock: 10,
@@ -66,7 +73,8 @@ export const products = [
     id: '8',
     name: 'Robot de Cocina Multifunción',
     price: 1399000,
-    image: 'https://picsum.photos/seed/cocina-robot/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Cuisinart_food_processor.jpg/500px-Cuisinart_food_processor.jpg',
     category: 'Electrodomésticos',
     description: 'Amasa, tritura, cocina al vapor. Bowl 2.3L, pantalla táctil.',
     stock: 6,
@@ -75,7 +83,8 @@ export const products = [
     id: '9',
     name: 'Mortero de Mármol',
     price: 179000,
-    image: 'https://picsum.photos/seed/cocina-mortero/400/400',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mortar_and_pestle.jpg/500px-Mortar_and_pestle.jpg',
     category: 'Utensilios',
     description: 'Mármol natural, diámetro 15 cm, mano incluida.',
     stock: 18,
@@ -84,7 +93,7 @@ export const products = [
     id: '10',
     name: 'Tostadora 2 Ranuras',
     price: 199000,
-    image: 'https://picsum.photos/seed/cocina-tostadora/400/400',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Toaster.jpg/500px-Toaster.jpg',
     category: 'Electrodomésticos',
     description: '6 niveles de tostado, bandeja extraíble, función descongelar.',
     stock: 22,
