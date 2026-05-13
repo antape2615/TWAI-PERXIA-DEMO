@@ -15,7 +15,7 @@ export default function Account() {
       const updated = addresses.map((a) => (a.id === editingId ? { ...a, ...data } : a));
       updateAddresses(updated);
     } else {
-      const newAddr = { ...data, id: `a${Date.now()}` };
+      const newAddr = { ...data, id: `a${crypto.randomUUID()}` };
       updateAddresses([...addresses, newAddr]);
     }
     setEditingId(null);

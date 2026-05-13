@@ -1,1 +1,4 @@
-/*    /index.html   200
+# API primero; si no, el catch-all del SPA captura todo y /api/* nunca llega a la función.
+/api/auth/*    /.netlify/functions/auth/:splat    200
+/api/auth      /.netlify/functions/auth           200
+/*             /index.html                        200

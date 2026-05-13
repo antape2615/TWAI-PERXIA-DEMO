@@ -22,14 +22,24 @@ export function AuthProvider({ children }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
-      const data = await res.json();
+      const text = await res.text();
+      let data;
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch {
+        return {
+          ok: false,
+          error:
+            'El servidor devolvió una respuesta no válida (¿/api/auth configurado en Netlify?).',
+        };
+      }
       if (data.ok && data.user) {
         setUser(data.user);
         localStorage.setItem('catalog_user', JSON.stringify(data.user));
         return { ok: true };
       }
       return { ok: false, error: data.error || 'Email o contraseña incorrectos' };
-    } catch (err) {
+    } catch {
       return { ok: false, error: 'Error de conexión al servidor' };
     } finally {
       setLoading(false);
