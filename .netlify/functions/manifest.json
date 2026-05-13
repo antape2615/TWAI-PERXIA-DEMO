@@ -1,1 +1,0 @@
-{"functions":[{"bundler":"esbuild","buildData":{"runtimeAPIVersion":1},"mainFile":"/Users/angietatianapena/TWAI-PERXIA-DEMO/netlify/functions/auth/auth.js","name":"auth","priority":10,"path":"/Users/angietatianapena/TWAI-PERXIA-DEMO/.netlify/functions/auth.zip","runtime":"js"}],"system":{"arch":"arm64","platform":"darwin"},"timestamp":1778601681242,"version":1}

@@ -7,6 +7,23 @@ const COL = process.env.MONGODB_COLLECTION || "users-prod";
 
 let cachedClient = null;
 
+/** Ruta del request según el runtime de Netlify / Lambda (path vs rawPath). */
+function normalizeAuthPath(event) {
+  let p = event.path || "";
+  if (event.rawPath) p = event.rawPath;
+  if (p.startsWith("http://") || p.startsWith("https://")) {
+    try {
+      p = new URL(p).pathname;
+    } catch (_) {
+      /* mantener p */
+    }
+  }
+  return p
+    .replace(/\/\.netlify\/functions\/auth/gi, "")
+    .replace(/\/api\/auth/gi, "")
+    .replace(/\/+$/, "") || "/";
+}
+
 async function getCollection() {
   if (!cachedClient) {
     cachedClient = new MongoClient(MONGO_URI);
@@ -33,13 +50,17 @@ exports.handler = async function (event) {
     return json(204, {});
   }
 
-  const path = event.path
-    .replace("/.netlify/functions/auth", "")
-    .replace("/api/auth", "");
+  const path = normalizeAuthPath(event);
 
   if (event.httpMethod === "POST" && (path === "/login" || path === "" || path === "/")) {
     try {
-      const { email, password } = JSON.parse(event.body || "{}");
+      let body;
+      try {
+        body = JSON.parse(event.body || "{}");
+      } catch {
+        return json(400, { ok: false, error: "Cuerpo de solicitud inválido" });
+      }
+      const { email, password } = body;
       if (!email || !password) {
         return json(400, { ok: false, error: "Email y contraseña requeridos" });
       }

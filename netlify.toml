@@ -6,6 +6,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+# El driver de MongoDB no debe empaquetarse con esbuild (falla en producción).
+[functions.auth]
+  external_node_modules = ["mongodb"]
+
 # API routes → Netlify Functions
 [[redirects]]
   from = "/api/auth/*"
