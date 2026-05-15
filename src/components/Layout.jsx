@@ -1,17 +1,22 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../hooks/useTheme';
 import styles from './Layout.module.css';
 
 export default function Layout({ children }) {
   const { user, logout } = useAuth();
   const { count } = useCart();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
     navigate('/');
   };
+
+  const isDark = theme === 'dark';
+  const nextThemeLabel = isDark ? 'claro' : 'oscuro';
 
   return (
     <div className={styles.wrapper}>
@@ -41,6 +46,18 @@ export default function Layout({ children }) {
               </Link>
             </>
           )}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className={styles.themeToggle}
+            aria-label={`Cambiar a tema ${nextThemeLabel}`}
+            aria-pressed={isDark}
+            title={`Cambiar a tema ${nextThemeLabel}`}
+          >
+            <span aria-hidden="true" className={styles.themeIcon}>
+              {isDark ? '☀️' : '🌙'}
+            </span>
+          </button>
         </nav>
       </header>
       <main className={styles.main}>{children}</main>
