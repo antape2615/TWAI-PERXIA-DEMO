@@ -3,9 +3,12 @@ import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import { usePriceFilter } from '../hooks/usePriceFilter';
 import { formatCOP } from '../utils/currency';
+import { trackCatalogFilterEvent } from '../utils/catalogFilterTelemetry';
+import {
+  NO_RESULTS_MESSAGE,
+  PRICE_SLIDER_STEP,
+} from '../config/catalogFilters';
 import styles from './Catalog.module.css';
-
-const PRICE_STEP = 10000;
 
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,7 +22,11 @@ export default function Catalog() {
     resetPriceFilter,
     filteredProducts,
     isFiltering,
-  } = usePriceFilter(products, searchTerm, { step: PRICE_STEP });
+    catalogTotal,
+  } = usePriceFilter(products, searchTerm, {
+    step: PRICE_SLIDER_STEP,
+    onEvent: trackCatalogFilterEvent,
+  });
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -76,13 +83,14 @@ export default function Catalog() {
               type="range"
               min={priceRange.min}
               max={priceRange.max}
-              step={PRICE_STEP}
+              step={PRICE_SLIDER_STEP}
               value={minPrice}
               onChange={(e) => setMinPrice(e.target.value)}
-              aria-label={`Precio mínimo: ${formatCOP(minPrice)}`}
+              aria-label="Precio mínimo en COP"
               aria-valuemin={priceRange.min}
               aria-valuemax={priceRange.max}
               aria-valuenow={minPrice}
+              aria-valuetext={formatCOP(minPrice)}
               className={styles.rangeInput}
             />
           </div>
@@ -96,13 +104,14 @@ export default function Catalog() {
               type="range"
               min={priceRange.min}
               max={priceRange.max}
-              step={PRICE_STEP}
+              step={PRICE_SLIDER_STEP}
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
-              aria-label={`Precio máximo: ${formatCOP(maxPrice)}`}
+              aria-label="Precio máximo en COP"
               aria-valuemin={priceRange.min}
               aria-valuemax={priceRange.max}
               aria-valuenow={maxPrice}
+              aria-valuetext={formatCOP(maxPrice)}
               className={styles.rangeInput}
             />
           </div>
@@ -122,7 +131,7 @@ export default function Catalog() {
       {filteredProducts.length > 0 ? (
         <>
           <p className={styles.resultsCount} role="status">
-            Mostrando {filteredProducts.length} de {products.length} productos
+            Mostrando {filteredProducts.length} de {catalogTotal} productos
           </p>
           <section className={styles.grid}>
             {filteredProducts.map((product) => (
@@ -132,7 +141,7 @@ export default function Catalog() {
         </>
       ) : (
         <p className={styles.noResults} role="status">
-          No se encontraron productos con los filtros aplicados.
+          {NO_RESULTS_MESSAGE}
         </p>
       )}
     </div>
