@@ -169,6 +169,65 @@
   color: var(--primary);
 }
 
+.viewToolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.viewToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.viewLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.viewButtons {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.viewButton:hover {
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+.viewButton:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.viewButtonActive {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
 .resultsCount {
   margin: 0 0 1rem;
   color: var(--text-muted);
@@ -179,6 +238,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
 }
 
 .noResults {
@@ -207,6 +271,19 @@
 }
 
 @media (max-width: 640px) {
+  .viewToggle {
+    align-items: flex-start;
+  }
+
+  .viewButtons {
+    width: 100%;
+  }
+
+  .viewButton {
+    flex: 1;
+    justify-content: center;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
