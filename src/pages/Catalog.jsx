@@ -1,14 +1,38 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import { usePriceFilter } from '../hooks/usePriceFilter';
 import { formatCOP } from '../utils/currency';
+import { logCatalogFilterEvent } from '../utils/filterEvents';
 import styles from './Catalog.module.css';
 
 const PRICE_STEP = 10000;
+const FULL_CATALOG_RANGE = (() => {
+  if (!products.length) {
+    return { min: 0, max: 0 };
+  }
+
+  const prices = products
+    .map((product) => Number(product.price))
+    .filter((price) => Number.isFinite(price));
+
+  if (!prices.length) {
+    return { min: 0, max: 0 };
+  }
+
+  return {
+    min: Math.min(...prices),
+    max: Math.max(...prices),
+  };
+})();
 
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState('');
+  const hadZeroResultsRef = useRef(false);
+
+  const handleFilterEvent = useCallback((eventName, payload = {}) => {
+    logCatalogFilterEvent(eventName, payload);
+  }, []);
 
   const {
     priceRange,
@@ -19,7 +43,11 @@ export default function Catalog() {
     resetPriceFilter,
     filteredProducts,
     isFiltering,
-  } = usePriceFilter(products, searchTerm, { step: PRICE_STEP });
+    hasPriceRange,
+  } = usePriceFilter(products, searchTerm, {
+    step: PRICE_STEP,
+    onEvent: handleFilterEvent,
+  });
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -28,9 +56,46 @@ export default function Catalog() {
   const handleClearFilters = () => {
     setSearchTerm('');
     resetPriceFilter();
+    logCatalogFilterEvent('Filtros limpiados', {
+      searchTerm: '',
+      minPrice: FULL_CATALOG_RANGE.min,
+      maxPrice: FULL_CATALOG_RANGE.max,
+      filteredProducts: products.length,
+      totalProducts: products.length,
+    });
   };
 
   const hasAnyFilter = isFiltering || Boolean(searchTerm.trim());
+  const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+  const rangeLabel = hasPriceRange
+    ? `${formatCOP(priceRange.min)} – ${formatCOP(priceRange.max)}`
+    : 'N/A';
+
+  useEffect(() => {
+    logCatalogFilterEvent('Contador actualizado', {
+      searchTerm: normalizedSearchTerm,
+      minPrice,
+      maxPrice,
+      filteredProducts: filteredProducts.length,
+      totalProducts: products.length,
+    });
+  }, [filteredProducts.length, maxPrice, minPrice, normalizedSearchTerm]);
+
+  useEffect(() => {
+    const hasNoResults = filteredProducts.length === 0;
+
+    if (hasNoResults && !hadZeroResultsRef.current) {
+      logCatalogFilterEvent('Filtro sin resultados', {
+        searchTerm: normalizedSearchTerm,
+        minPrice,
+        maxPrice,
+        filteredProducts: 0,
+        totalProducts: products.length,
+      });
+    }
+
+    hadZeroResultsRef.current = hasNoResults;
+  }, [filteredProducts.length, maxPrice, minPrice, normalizedSearchTerm]);
 
   return (
     <div className={styles.wrapper}>
@@ -63,7 +128,7 @@ export default function Catalog() {
           <div className={styles.priceHeader}>
             <span className={styles.priceTitle}>Rango de precios</span>
             <span className={styles.priceValues} aria-live="polite">
-              {formatCOP(minPrice)} – {formatCOP(maxPrice)}
+              {rangeLabel}
             </span>
           </div>
 
@@ -83,8 +148,10 @@ export default function Catalog() {
               aria-valuemin={priceRange.min}
               aria-valuemax={priceRange.max}
               aria-valuenow={minPrice}
+              disabled={!hasPriceRange}
               className={styles.rangeInput}
             />
+            <span className={styles.rangeValue}>{formatCOP(minPrice)}</span>
           </div>
 
           <div className={styles.rangeRow}>
@@ -103,8 +170,10 @@ export default function Catalog() {
               aria-valuemin={priceRange.min}
               aria-valuemax={priceRange.max}
               aria-valuenow={maxPrice}
+              disabled={!hasPriceRange}
               className={styles.rangeInput}
             />
+            <span className={styles.rangeValue}>{formatCOP(maxPrice)}</span>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 /**
  * Hook reutilizable para filtrar una lista de productos por rango de precios
@@ -9,65 +9,160 @@ import { useCallback, useMemo, useState } from 'react';
  *
  * @param {Array<{id: string, name: string, price: number, category?: string}>} products
  * @param {string} [searchTerm='']
- * @param {{ step?: number }} [options]
+ * @param {{ step?: number, onEvent?: (eventName: string, payload?: Record<string, unknown>) => void }} [options]
  */
 export function usePriceFilter(products = [], searchTerm = '', options = {}) {
-  const { step = 1 } = options;
+  const { step = 1, onEvent } = options;
+
+  const emitEvent = useCallback(
+    (eventName, payload = {}) => {
+      if (typeof onEvent === 'function') {
+        onEvent(eventName, payload);
+      }
+    },
+    [onEvent]
+  );
+
+  const normalizedTerm = (searchTerm || '').trim().toLowerCase();
+
+  const textFilteredProducts = useMemo(() => {
+    if (!normalizedTerm) {
+      return products || [];
+    }
+
+    return (products || []).filter((product) => {
+      const name = (product?.name || '').toLowerCase();
+      const category = (product?.category || '').toLowerCase();
+      return name.includes(normalizedTerm) || category.includes(normalizedTerm);
+    });
+  }, [products, normalizedTerm]);
 
   const priceRange = useMemo(() => {
-    if (!products || products.length === 0) {
-      return { min: 0, max: 0 };
+    if (!textFilteredProducts || textFilteredProducts.length === 0) {
+      return { min: 0, max: 0, hasProducts: false };
     }
-    const prices = products
+
+    const prices = textFilteredProducts
       .map((p) => Number(p?.price))
       .filter((p) => Number.isFinite(p));
+
     if (prices.length === 0) {
-      return { min: 0, max: 0 };
+      return { min: 0, max: 0, hasProducts: false };
     }
+
     return {
       min: Math.floor(Math.min(...prices)),
       max: Math.ceil(Math.max(...prices)),
+      hasProducts: true,
     };
-  }, [products]);
+  }, [textFilteredProducts]);
 
   const [minPrice, setMinPriceState] = useState(priceRange.min);
   const [maxPrice, setMaxPriceState] = useState(priceRange.max);
   const [lastRange, setLastRange] = useState(priceRange);
 
-  // Re-sincronizamos cuando cambia el conjunto de productos (p.ej. recarga
-  // del catálogo) ajustando estado durante el render — patrón recomendado por
-  // React para derivar estado de props sin useEffect.
   if (
     lastRange.min !== priceRange.min ||
-    lastRange.max !== priceRange.max
+    lastRange.max !== priceRange.max ||
+    lastRange.hasProducts !== priceRange.hasProducts
   ) {
     setLastRange(priceRange);
     setMinPriceState(priceRange.min);
     setMaxPriceState(priceRange.max);
   }
 
+  useEffect(() => {
+    emitEvent('Rango de precios actualizado', {
+      searchTerm: normalizedTerm,
+      minPrice: priceRange.hasProducts ? priceRange.min : null,
+      maxPrice: priceRange.hasProducts ? priceRange.max : null,
+      baseProducts: textFilteredProducts.length,
+    });
+  }, [
+    emitEvent,
+    normalizedTerm,
+    priceRange.hasProducts,
+    priceRange.max,
+    priceRange.min,
+    textFilteredProducts.length,
+  ]);
+
+  const normalizeWithStep = useCallback(
+    (value) => {
+      const bounded = Math.max(priceRange.min, Math.min(value, priceRange.max));
+      if (!Number.isFinite(step) || step <= 1) {
+        return bounded;
+      }
+      const snapped =
+        priceRange.min +
+        Math.round((bounded - priceRange.min) / step) * step;
+      return Math.max(priceRange.min, Math.min(snapped, priceRange.max));
+    },
+    [priceRange.max, priceRange.min, step]
+  );
+
   const setMinPrice = useCallback(
     (value) => {
       const numeric = Number(value);
       if (!Number.isFinite(numeric)) return;
-      setMinPriceState((prevMin) => {
-        const clamped = Math.max(priceRange.min, Math.min(numeric, maxPrice));
-        return clamped === prevMin ? prevMin : clamped;
+
+      const nextMin = normalizeWithStep(numeric);
+      const previousMin = minPrice;
+      const previousMax = maxPrice;
+      let nextMax = maxPrice;
+
+      if (nextMin > maxPrice) {
+        nextMax = nextMin;
+        setMaxPriceState(nextMin);
+        emitEvent('Validación rango precio', {
+          beforeMin: previousMin,
+          beforeMax: previousMax,
+          afterMin: nextMin,
+          afterMax: nextMax,
+          adjustedBy: 'min',
+        });
+      }
+
+      setMinPriceState(nextMin);
+      emitEvent('Filtro precio ajustado', {
+        changed: 'min',
+        minPrice: nextMin,
+        maxPrice: nextMax,
       });
     },
-    [priceRange.min, maxPrice]
+    [emitEvent, maxPrice, minPrice, normalizeWithStep]
   );
 
   const setMaxPrice = useCallback(
     (value) => {
       const numeric = Number(value);
       if (!Number.isFinite(numeric)) return;
-      setMaxPriceState((prevMax) => {
-        const clamped = Math.min(priceRange.max, Math.max(numeric, minPrice));
-        return clamped === prevMax ? prevMax : clamped;
+
+      const nextMax = normalizeWithStep(numeric);
+      const previousMin = minPrice;
+      const previousMax = maxPrice;
+      let nextMin = minPrice;
+
+      if (nextMax < minPrice) {
+        nextMin = nextMax;
+        setMinPriceState(nextMax);
+        emitEvent('Validación rango precio', {
+          beforeMin: previousMin,
+          beforeMax: previousMax,
+          afterMin: nextMin,
+          afterMax: nextMax,
+          adjustedBy: 'max',
+        });
+      }
+
+      setMaxPriceState(nextMax);
+      emitEvent('Filtro precio ajustado', {
+        changed: 'max',
+        minPrice: nextMin,
+        maxPrice: nextMax,
       });
     },
-    [priceRange.max, minPrice]
+    [emitEvent, maxPrice, minPrice, normalizeWithStep]
   );
 
   const resetPriceFilter = useCallback(() => {
@@ -75,31 +170,56 @@ export function usePriceFilter(products = [], searchTerm = '', options = {}) {
     setMaxPriceState(priceRange.max);
   }, [priceRange.min, priceRange.max]);
 
+  const effectiveMinPrice = Math.max(
+    priceRange.min,
+    Math.min(minPrice, priceRange.max)
+  );
+  const effectiveMaxPrice = Math.max(
+    effectiveMinPrice,
+    Math.min(maxPrice, priceRange.max)
+  );
+
   const filteredProducts = useMemo(() => {
-    const term = (searchTerm || '').trim().toLowerCase();
-    return (products || []).filter((product) => {
+    return textFilteredProducts.filter((product) => {
       const price = Number(product?.price) || 0;
-      const matchesPrice = price >= minPrice && price <= maxPrice;
-      if (!matchesPrice) return false;
-      if (!term) return true;
-      const name = (product?.name || '').toLowerCase();
-      const category = (product?.category || '').toLowerCase();
-      return name.includes(term) || category.includes(term);
+      return price >= effectiveMinPrice && price <= effectiveMaxPrice;
     });
-  }, [products, searchTerm, minPrice, maxPrice]);
+  }, [textFilteredProducts, effectiveMinPrice, effectiveMaxPrice]);
+
+  const totalProducts = products?.length ?? 0;
+
+  useEffect(() => {
+    emitEvent('Filtro combinado aplicado', {
+      searchTerm: normalizedTerm,
+      minPrice: effectiveMinPrice,
+      maxPrice: effectiveMaxPrice,
+      filteredProducts: filteredProducts.length,
+      baseProducts: textFilteredProducts.length,
+      totalProducts,
+    });
+  }, [
+    emitEvent,
+    filteredProducts.length,
+    effectiveMaxPrice,
+    effectiveMinPrice,
+    normalizedTerm,
+    textFilteredProducts.length,
+    totalProducts,
+  ]);
 
   const isFiltering =
-    minPrice !== priceRange.min || maxPrice !== priceRange.max;
+    effectiveMinPrice !== priceRange.min || effectiveMaxPrice !== priceRange.max;
 
   return {
     priceRange,
-    minPrice,
-    maxPrice,
+    minPrice: effectiveMinPrice,
+    maxPrice: effectiveMaxPrice,
     setMinPrice,
     setMaxPrice,
     resetPriceFilter,
     filteredProducts,
     isFiltering,
+    hasPriceRange: priceRange.hasProducts,
     step,
   };
 }
