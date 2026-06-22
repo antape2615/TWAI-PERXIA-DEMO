@@ -12,4 +12,10 @@ export default defineConfig({
   server: {
     strictPort: false,
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.js',
+    css: true,
+  },
 })

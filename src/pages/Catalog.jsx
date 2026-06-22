@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
+import ProductListItem from '../components/ProductListItem';
 import { usePriceFilter } from '../hooks/usePriceFilter';
 import { formatCOP } from '../utils/currency';
 import { trackCatalogFilterEvent } from '../utils/catalogFilterTelemetry';
+import { trackCatalogViewEvent } from '../utils/catalogViewTelemetry';
+import {
+  DEFAULT_CATALOG_VIEW_MODE,
+  isValidCatalogViewMode,
+  persistCatalogViewMode,
+  readCatalogViewMode,
+} from '../utils/catalogViewMode';
 import {
   NO_RESULTS_MESSAGE,
   PRICE_SLIDER_STEP,
@@ -12,6 +20,18 @@ import styles from './Catalog.module.css';
 
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [viewFeedback, setViewFeedback] = useState('');
+  const [viewMode, setViewMode] = useState(() => {
+    const preference = readCatalogViewMode();
+    trackCatalogViewEvent('PreferenciaModoLeida', {
+      value: preference.mode,
+      source: preference.source,
+    });
+    trackCatalogViewEvent('ModoVisualizacionInicial', {
+      value: preference.mode,
+    });
+    return preference.mode;
+  });
 
   const {
     priceRange,
@@ -35,6 +55,30 @@ export default function Catalog() {
   const handleClearFilters = () => {
     setSearchTerm('');
     resetPriceFilter();
+  };
+
+  const handleViewModeChange = (requestedMode) => {
+    if (!isValidCatalogViewMode(requestedMode) || requestedMode === viewMode) return;
+
+    const persisted = persistCatalogViewMode(requestedMode);
+
+    if (!persisted.ok) {
+      setViewMode(DEFAULT_CATALOG_VIEW_MODE);
+      setViewFeedback('No fue posible guardar tu preferencia de vista.');
+      trackCatalogViewEvent('CambioModoVisualizacion', {
+        value: DEFAULT_CATALOG_VIEW_MODE,
+        status: 'fallback',
+        reason: persisted.reason,
+      });
+      return;
+    }
+
+    setViewMode(requestedMode);
+    setViewFeedback('');
+    trackCatalogViewEvent('CambioModoVisualizacion', {
+      value: requestedMode,
+      status: 'ok',
+    });
   };
 
   const hasAnyFilter = isFiltering || Boolean(searchTerm.trim());
@@ -128,17 +172,54 @@ export default function Catalog() {
         )}
       </section>
 
-      {filteredProducts.length > 0 ? (
-        <>
-          <p className={styles.resultsCount} role="status">
-            Mostrando {filteredProducts.length} de {catalogTotal} productos
+      <section className={styles.viewToolbar} aria-label="Control de modo de vista">
+        <div className={styles.viewToggle} role="group" aria-label="Modo de vista del catálogo">
+          <span className={styles.viewLabel}>Modo de vista</span>
+          <div className={styles.viewButtons}>
+            <button
+              type="button"
+              onClick={() => handleViewModeChange('grid')}
+              aria-pressed={viewMode === 'grid'}
+              className={`${styles.viewButton} ${viewMode === 'grid' ? styles.viewButtonActive : ''}`}
+            >
+              Cuadrícula
+            </button>
+            <button
+              type="button"
+              onClick={() => handleViewModeChange('list')}
+              aria-pressed={viewMode === 'list'}
+              className={`${styles.viewButton} ${viewMode === 'list' ? styles.viewButtonActive : ''}`}
+            >
+              Lista
+            </button>
+          </div>
+        </div>
+
+        <p className={styles.resultsCount} role="status">
+          Mostrando {filteredProducts.length} de {catalogTotal} productos
+        </p>
+
+        {viewFeedback && (
+          <p className={styles.visuallyHidden} role="status" aria-live="polite">
+            {viewFeedback}
           </p>
-          <section className={styles.grid}>
-            {filteredProducts.map((product) => (
+        )}
+      </section>
+
+      {filteredProducts.length > 0 ? (
+        <section
+          className={viewMode === 'grid' ? styles.grid : styles.list}
+          data-view-mode={viewMode}
+          aria-label="Listado de productos"
+        >
+          {filteredProducts.map((product) =>
+            viewMode === 'grid' ? (
               <ProductCard key={product.id} product={product} />
-            ))}
-          </section>
-        </>
+            ) : (
+              <ProductListItem key={product.id} product={product} />
+            )
+          )}
+        </section>
       ) : (
         <p className={styles.noResults} role="status">
           {NO_RESULTS_MESSAGE}
