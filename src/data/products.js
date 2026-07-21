@@ -2,7 +2,7 @@
 export const products = [
   {
     id: '1',
-    name: 'Juego de Sartenes Antiadherente',
+    name: 'Nonstick Frying Pan Set',
     price: 359000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hahn_29cm_Frying_Pan.jpg/500px-Hahn_29cm_Frying_Pan.jpg',
@@ -12,7 +12,7 @@ export const products = [
   },
   {
     id: '2',
-    name: 'Batidora de Pie Profesional',
+    name: 'Professional Stand Mixer',
     price: 519000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/White_KitchenAid_mixer_%28KSM150PSWH%29.jpg/500px-White_KitchenAid_mixer_%28KSM150PSWH%29.jpg',
@@ -22,7 +22,7 @@ export const products = [
   },
   {
     id: '3',
-    name: 'Cuchillos de Cocina Japoneses',
+    name: 'Japanese Kitchen Knives',
     price: 639000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chef%27s_knife.jpg/500px-Chef%27s_knife.jpg',
@@ -32,7 +32,7 @@ export const products = [
   },
   {
     id: '4',
-    name: 'Olla a Presión Eléctrica',
+    name: 'Electric Pressure Cooker',
     price: 319000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pressure_cooker.jpg/500px-Pressure_cooker.jpg',
@@ -42,7 +42,7 @@ export const products = [
   },
   {
     id: '5',
-    name: 'Tabla de Cortar Bambú',
+    name: 'Bamboo Cutting Board',
     price: 139000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cutting_board.jpg/500px-Cutting_board.jpg',
@@ -52,7 +52,7 @@ export const products = [
   },
   {
     id: '6',
-    name: 'Cafetera Espresso Manual',
+    name: 'Manual Espresso Maker',
     price: 279000,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Moka_pot.jpg/500px-Moka_pot.jpg',
     category: 'Café',
@@ -61,7 +61,7 @@ export const products = [
   },
   {
     id: '7',
-    name: 'Set de Batería de Cocina',
+    name: 'Cookware Set',
     price: 799000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/All-Clad_Copper_Core_pots.jpeg/500px-All-Clad_Copper_Core_pots.jpeg',
@@ -71,7 +71,7 @@ export const products = [
   },
   {
     id: '8',
-    name: 'Robot de Cocina Multifunción',
+    name: 'Multifunction Food Processor',
     price: 1399000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Cuisinart_food_processor.jpg/500px-Cuisinart_food_processor.jpg',
@@ -81,7 +81,7 @@ export const products = [
   },
   {
     id: '9',
-    name: 'Mortero de Mármol',
+    name: 'Marble Mortar',
     price: 179000,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mortar_and_pestle.jpg/500px-Mortar_and_pestle.jpg',
@@ -91,7 +91,7 @@ export const products = [
   },
   {
     id: '10',
-    name: 'Tostadora 2 Ranuras',
+    name: '2-Slice Toaster',
     price: 199000,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Toaster.jpg/500px-Toaster.jpg',
     category: 'Electrodomésticos',
