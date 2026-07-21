@@ -1,6 +1,67 @@
-# E2E Playwright — Ficohsa HU-ARQ-001
+# E2E Playwright — Ficohsa
 
-Suite de pruebas E2E contra **https://www.grupoficohsa.com** para validar criterios de aceptación de la historia de usuario **HU-ARQ-001** (arquitectura SSR / microfrontends).
+Suites de pruebas E2E contra **https://www.grupoficohsa.com** (BASE_URL del cliente).
+
+## Auditoría de botones + tiempos de respuesta
+
+Automatiza el inventario de **todos los controles accionables visibles** en la página principal y páginas clave alcanzables desde la navegación. Para cada botón seguro de probar:
+
+1. Click con medición de latencia (click → idle de red / UI estable).
+2. Registro de selector, texto, URL antes/después, estado (`ok` / `error` / `skipped`), errores de consola/red.
+3. Marcado de botones **lentos** (>2 s) y **rotos**.
+
+### Ejecución
+
+```bash
+npm install
+npx playwright install chromium
+
+# Auditoría completa + PDF de evidencia
+npm run test:button-audit:report
+
+# Solo la suite Playwright
+npx playwright test e2e/ficosha/button-audit.spec.ts
+```
+
+### Variables opcionales
+
+| Variable | Default | Descripción |
+|----------|---------|-------------|
+| `BUTTON_SLOW_THRESHOLD_MS` | 2000 | Umbral para marcar botón lento |
+| `BUTTON_AUDIT_MAX_PAGES` | 12 | Máximo de páginas internas a auditar |
+| `BUTTON_AUDIT_REPEATS` | 1 | Repeticiones por botón (habilita p50/p95 si >1) |
+
+### Evidencia generada
+
+| Ruta | Contenido |
+|------|-----------|
+| `evidence/timings.json` | Datos crudos de latencias y metadatos |
+| `evidence/button-audit-report.csv` | Tabla exportable |
+| `evidence/button-audit-report.md` | Reporte Markdown con resumen |
+| `evidence/screenshots/button-audit/` | Capturas antes/después por botón |
+| `evidence/video/*.webm` | Video de la pasada completa |
+| `evidence/report.pdf` | PDF con tabla + capturas |
+
+### Controles excluidos (skipped)
+
+Logout, pagos reales, borrados, envíos irreversibles, newsletter submit, enlaces externos y controles deshabilitados.
+
+### Última ejecución (2026-07-21)
+
+| Resultado | Valor |
+|-----------|-------|
+| **Páginas auditadas** | 11 (nav principal + secciones clave) |
+| **Controles inventariados** | 68 |
+| **OK / Error / Skipped** | 59 / 2 / 7 |
+| **Lentos (>2 s)** | 0 |
+| **p50 / p95 (ok)** | 709 ms / 1255 ms |
+| **Hallazgo** | CTA «Prensa Ficohsa» en home no visible tras recarga (2 errores) |
+
+---
+
+## HU-ARQ-001 — Arquitectura SSR / Microfrontends
+
+Suite para validar criterios de aceptación de la historia de usuario **HU-ARQ-001** (arquitectura SSR / microfrontends).
 
 ## Casos de prueba derivados
 

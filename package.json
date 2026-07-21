@@ -12,7 +12,10 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test e2e/ficosha/hu-arq-001.spec.ts",
     "test:e2e:report": "playwright test e2e/ficosha/hu-arq-001.spec.ts; node scripts/generate-evidence-pdf.mjs",
-    "test:e2e:pdf": "node scripts/generate-evidence-pdf.mjs"
+    "test:e2e:pdf": "node scripts/generate-evidence-pdf.mjs",
+    "test:button-audit": "playwright test e2e/ficosha/button-audit.spec.ts",
+    "test:button-audit:report": "playwright test e2e/ficosha/button-audit.spec.ts --project=ficosha-button-audit && node scripts/generate-button-audit-pdf.mjs",
+    "test:button-audit:pdf": "node scripts/generate-button-audit-pdf.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",

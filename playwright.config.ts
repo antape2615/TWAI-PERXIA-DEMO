@@ -31,6 +31,17 @@ export default defineConfig({
     {
       name: 'ficosha-chromium',
       use: { ...devices['Desktop Chrome'] },
+      testIgnore: '**/button-audit.spec.ts',
+    },
+    {
+      name: 'ficosha-button-audit',
+      use: {
+        ...devices['Desktop Chrome'],
+        video: 'on',
+        screenshot: 'off',
+        trace: 'off',
+      },
+      testMatch: '**/button-audit.spec.ts',
     },
   ],
 });
