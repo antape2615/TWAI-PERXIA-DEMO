@@ -122,7 +122,7 @@ export async function discoverKeyPages(page: Page): Promise<string[]> {
 
   const paths = await page.evaluate((baseUrl) => {
     const base = new URL(baseUrl);
-    const seen = new Set<string>();
+    const seen = new Set<string>(['/']);
     const out: string[] = ['/'];
 
     const add = (href: string | null) => {

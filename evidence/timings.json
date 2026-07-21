@@ -1,0 +1,2289 @@
+{
+  "baseUrl": "https://www.grupoficohsa.com",
+  "auditedAt": "2026-07-21T15:02:17.015Z",
+  "pagesVisited": [
+    "/",
+    "/acerca-de-ficohsa/nuestra-presencia",
+    "/",
+    "/acerca-de-ficohsa/nosotros",
+    "/acerca-de-ficohsa/prensa-ficohsa",
+    "/acerca-de-ficohsa/trabaja-con-nosotros",
+    "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+    "/sostenibilidad/estrategia-sostenibilidad",
+    "/sostenibilidad/fundacion-ficohsa",
+    "/sostenibilidad/tu-conciencia-financiera",
+    "/sostenibilidad/mujeres-adelante",
+    "/sostenibilidad/de-mi-tierra"
+  ],
+  "totalButtons": 68,
+  "ok": 59,
+  "error": 2,
+  "skipped": 7,
+  "slow": 0,
+  "broken": 2,
+  "globalP50Ms": 709,
+  "globalP95Ms": 1255,
+  "records": [
+    {
+      "id": "home__000-mas-noticias",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "button:nth-of-type(2)",
+      "text": "Más noticias",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 980,
+      "samples": [
+        {
+          "latencyMs": 980,
+          "timestamp": "2026-07-21T15:00:26.836Z"
+        }
+      ],
+      "p50Ms": 980,
+      "p95Ms": 980,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__000-mas-noticias-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__000-mas-noticias-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:26.837Z"
+    },
+    {
+      "id": "home__001-suscribirme",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "button:nth-of-type(3)",
+      "text": "Suscribirme",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "skipped",
+      "skipReason": "Control deshabilitado (no accionable)",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:00:26.837Z"
+    },
+    {
+      "id": "home__002-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "ok",
+      "latencyMs": 651,
+      "samples": [
+        {
+          "latencyMs": 651,
+          "timestamp": "2026-07-21T15:00:28.119Z"
+        }
+      ],
+      "p50Ms": 651,
+      "p95Ms": 651,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__002-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__002-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:28.119Z"
+    },
+    {
+      "id": "home__003-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "ok",
+      "latencyMs": 664,
+      "samples": [
+        {
+          "latencyMs": 664,
+          "timestamp": "2026-07-21T15:00:29.342Z"
+        }
+      ],
+      "p50Ms": 664,
+      "p95Ms": 664,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__003-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__003-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:29.342Z"
+    },
+    {
+      "id": "home__004-conocenos",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/nosotros\"]:has-text(\"Conócenos\")",
+      "text": "Conócenos",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 1131,
+      "samples": [
+        {
+          "latencyMs": 1131,
+          "timestamp": "2026-07-21T15:00:31.067Z"
+        }
+      ],
+      "p50Ms": 1131,
+      "p95Ms": 1131,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__004-conocenos-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__004-conocenos-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:31.067Z"
+    },
+    {
+      "id": "home__005-prensa-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/prensa-ficohsa\"]:has-text(\"Prensa Ficohsa\")",
+      "text": "Prensa Ficohsa",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "error",
+      "latencyMs": 0,
+      "samples": [
+        {
+          "latencyMs": 0,
+          "timestamp": "2026-07-21T15:00:36.518Z"
+        }
+      ],
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "slow": false,
+      "broken": true,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotAfter": "evidence/screenshots/button-audit/home__005-prensa-ficohsa-r1-error__after.png",
+      "error": "Control no visible en viewport tras recarga",
+      "auditedAt": "2026-07-21T15:00:36.518Z"
+    },
+    {
+      "id": "home__006-mas-noticias",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/prensa-ficohsa\"]:has-text(\"Más noticias\")",
+      "text": "Más noticias",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 639,
+      "samples": [
+        {
+          "latencyMs": 639,
+          "timestamp": "2026-07-21T15:00:37.762Z"
+        }
+      ],
+      "p50Ms": 639,
+      "p95Ms": 639,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__006-mas-noticias-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__006-mas-noticias-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:37.762Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nuestra-presencia__000-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "pagePath": "/acerca-de-ficohsa/nuestra-presencia",
+      "pageTitle": "Nuestra Presencia | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "status": "ok",
+      "latencyMs": 651,
+      "samples": [
+        {
+          "latencyMs": 651,
+          "timestamp": "2026-07-21T15:00:39.541Z"
+        }
+      ],
+      "p50Ms": 651,
+      "p95Ms": 651,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nuestra-presencia__000-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nuestra-presencia__000-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:39.541Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nuestra-presencia__001-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "pagePath": "/acerca-de-ficohsa/nuestra-presencia",
+      "pageTitle": "Nuestra Presencia | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+      "status": "ok",
+      "latencyMs": 630,
+      "samples": [
+        {
+          "latencyMs": 630,
+          "timestamp": "2026-07-21T15:00:40.883Z"
+        }
+      ],
+      "p50Ms": 630,
+      "p95Ms": 630,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nuestra-presencia__001-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nuestra-presencia__001-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:40.883Z"
+    },
+    {
+      "id": "home__000-mas-noticias",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "button:nth-of-type(2)",
+      "text": "Más noticias",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 655,
+      "samples": [
+        {
+          "latencyMs": 655,
+          "timestamp": "2026-07-21T15:00:42.445Z"
+        }
+      ],
+      "p50Ms": 655,
+      "p95Ms": 655,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__000-mas-noticias-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__000-mas-noticias-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:42.445Z"
+    },
+    {
+      "id": "home__001-suscribirme",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "button:nth-of-type(3)",
+      "text": "Suscribirme",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "skipped",
+      "skipReason": "Control deshabilitado (no accionable)",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:00:42.445Z"
+    },
+    {
+      "id": "home__002-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "ok",
+      "latencyMs": 669,
+      "samples": [
+        {
+          "latencyMs": 669,
+          "timestamp": "2026-07-21T15:00:43.734Z"
+        }
+      ],
+      "p50Ms": 669,
+      "p95Ms": 669,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__002-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__002-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:43.734Z"
+    },
+    {
+      "id": "home__003-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "ok",
+      "latencyMs": 664,
+      "samples": [
+        {
+          "latencyMs": 664,
+          "timestamp": "2026-07-21T15:00:44.991Z"
+        }
+      ],
+      "p50Ms": 664,
+      "p95Ms": 664,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__003-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__003-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:44.991Z"
+    },
+    {
+      "id": "home__004-conocenos",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/nosotros\"]:has-text(\"Conócenos\")",
+      "text": "Conócenos",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 698,
+      "samples": [
+        {
+          "latencyMs": 698,
+          "timestamp": "2026-07-21T15:00:46.228Z"
+        }
+      ],
+      "p50Ms": 698,
+      "p95Ms": 698,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__004-conocenos-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__004-conocenos-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:46.228Z"
+    },
+    {
+      "id": "home__005-prensa-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/prensa-ficohsa\"]:has-text(\"Prensa Ficohsa\")",
+      "text": "Prensa Ficohsa",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/",
+      "status": "error",
+      "latencyMs": 0,
+      "samples": [
+        {
+          "latencyMs": 0,
+          "timestamp": "2026-07-21T15:00:51.699Z"
+        }
+      ],
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "slow": false,
+      "broken": true,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotAfter": "evidence/screenshots/button-audit/home__005-prensa-ficohsa-r1-error__after.png",
+      "error": "Control no visible en viewport tras recarga",
+      "auditedAt": "2026-07-21T15:00:51.699Z"
+    },
+    {
+      "id": "home__006-mas-noticias",
+      "pageUrl": "https://www.grupoficohsa.com/",
+      "pagePath": "/",
+      "pageTitle": "Grupo Ficohsa | Soluciones financieras",
+      "selector": "a[href=\"/acerca-de-ficohsa/prensa-ficohsa\"]:has-text(\"Más noticias\")",
+      "text": "Más noticias",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 668,
+      "samples": [
+        {
+          "latencyMs": 668,
+          "timestamp": "2026-07-21T15:00:52.943Z"
+        }
+      ],
+      "p50Ms": 668,
+      "p95Ms": 668,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/home__006-mas-noticias-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/home__006-mas-noticias-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:52.943Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nosotros__000-valor-anterior",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "pagePath": "/acerca-de-ficohsa/nosotros",
+      "pageTitle": "Nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(2)",
+      "text": "Valor anterior",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 637,
+      "samples": [
+        {
+          "latencyMs": 637,
+          "timestamp": "2026-07-21T15:00:54.485Z"
+        }
+      ],
+      "p50Ms": 637,
+      "p95Ms": 637,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__000-valor-anterior-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__000-valor-anterior-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:54.485Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nosotros__001-siguiente-valor",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "pagePath": "/acerca-de-ficohsa/nosotros",
+      "pageTitle": "Nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(3)",
+      "text": "Siguiente valor",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 657,
+      "samples": [
+        {
+          "latencyMs": 657,
+          "timestamp": "2026-07-21T15:00:55.643Z"
+        }
+      ],
+      "p50Ms": 657,
+      "p95Ms": 657,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__001-siguiente-valor-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__001-siguiente-valor-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:55.643Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nosotros__002-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "pagePath": "/acerca-de-ficohsa/nosotros",
+      "pageTitle": "Nosotros | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 639,
+      "samples": [
+        {
+          "latencyMs": 639,
+          "timestamp": "2026-07-21T15:00:56.815Z"
+        }
+      ],
+      "p50Ms": 639,
+      "p95Ms": 639,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__002-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__002-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:56.815Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-nosotros__003-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "pagePath": "/acerca-de-ficohsa/nosotros",
+      "pageTitle": "Nosotros | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/nosotros",
+      "status": "ok",
+      "latencyMs": 637,
+      "samples": [
+        {
+          "latencyMs": 637,
+          "timestamp": "2026-07-21T15:00:57.961Z"
+        }
+      ],
+      "p50Ms": 637,
+      "p95Ms": 637,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__003-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-nosotros__003-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:57.961Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-prensa-ficohsa__000-grupo-financiero-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/prensa-ficohsa",
+      "pageTitle": "Prensa Ficohsa | Corporativo",
+      "selector": "button:nth-of-type(2)",
+      "text": "Grupo Financiero Ficohsa",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 1097,
+      "samples": [
+        {
+          "latencyMs": 1097,
+          "timestamp": "2026-07-21T15:00:59.887Z"
+        }
+      ],
+      "p50Ms": 1097,
+      "p95Ms": 1097,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "Error al obtener los datos: TypeError: Failed to fetch\n    at b (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-card-news-prensa/clientlibs.lc-2ab870efaa7f69269a7aba71b0e77873-lc.min.js:7:252)\n    at HTMLDocument.<anonymous> (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-card-news-prensa/clientlibs.lc-2ab870efaa7f69269a7aba71b0e77873-lc.min.js:8:259)",
+        "Error al obtener los datos: TypeError: Failed to fetch\n    at b (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-card-news-prensa/clientlibs.lc-2ab870efaa7f69269a7aba71b0e77873-lc.min.js:7:252)\n    at HTMLDocument.<anonymous> (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-card-news-prensa/clientlibs.lc-2ab870efaa7f69269a7aba71b0e77873-lc.min.js:8:239)\n    at m (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-dropdown-filter-prensa/clientlibs.lc-3e71c64c44704edfc841eede74984709-lc.min.js:4:121)\n    at HTMLUListElement.<anonymous> (https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-dropdown-filter-prensa/clientlibs.lc-3e71c64c44704edfc841eede74984709-lc.min.js:6:195)\n    at https://www.grupoficohsa.com/etc.clientlibs/bancofinancieracomercialprogram/components/gff-dropdown-filter-prensa/clientlibs.lc-3e71c64c44704edfc841eede74984709-lc.min.js:5:405",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__000-grupo-financiero-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__000-grupo-financiero-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:00:59.888Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-prensa-ficohsa__001-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/prensa-ficohsa",
+      "pageTitle": "Prensa Ficohsa | Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 1135,
+      "samples": [
+        {
+          "latencyMs": 1135,
+          "timestamp": "2026-07-21T15:01:01.511Z"
+        }
+      ],
+      "p50Ms": 1135,
+      "p95Ms": 1135,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__001-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__001-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:01.511Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-prensa-ficohsa__002-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/prensa-ficohsa",
+      "pageTitle": "Prensa Ficohsa | Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/prensa-ficohsa",
+      "status": "ok",
+      "latencyMs": 1129,
+      "samples": [
+        {
+          "latencyMs": 1129,
+          "timestamp": "2026-07-21T15:01:03.147Z"
+        }
+      ],
+      "p50Ms": 1129,
+      "p95Ms": 1129,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/default-image.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__002-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-prensa-ficohsa__002-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:03.147Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__000-ir-a-item-1",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(3)",
+      "text": "Ir a item 1",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1255,
+      "samples": [
+        {
+          "latencyMs": 1255,
+          "timestamp": "2026-07-21T15:01:06.582Z"
+        }
+      ],
+      "p50Ms": 1255,
+      "p95Ms": 1255,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__000-ir-a-item-1-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__000-ir-a-item-1-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:06.582Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__001-ir-a-item-2",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(4)",
+      "text": "Ir a item 2",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1321,
+      "samples": [
+        {
+          "latencyMs": 1321,
+          "timestamp": "2026-07-21T15:01:08.852Z"
+        }
+      ],
+      "p50Ms": 1321,
+      "p95Ms": 1321,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__001-ir-a-item-2-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__001-ir-a-item-2-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:08.852Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__002-ir-a-item-3",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(5)",
+      "text": "Ir a item 3",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1240,
+      "samples": [
+        {
+          "latencyMs": 1240,
+          "timestamp": "2026-07-21T15:01:11.034Z"
+        }
+      ],
+      "p50Ms": 1240,
+      "p95Ms": 1240,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__002-ir-a-item-3-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__002-ir-a-item-3-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:11.034Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__003-siguiente",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(6)",
+      "text": "Siguiente",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1435,
+      "samples": [
+        {
+          "latencyMs": 1435,
+          "timestamp": "2026-07-21T15:01:13.353Z"
+        }
+      ],
+      "p50Ms": 1435,
+      "p95Ms": 1435,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__003-siguiente-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__003-siguiente-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:13.353Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__004-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1252,
+      "samples": [
+        {
+          "latencyMs": 1252,
+          "timestamp": "2026-07-21T15:01:15.546Z"
+        }
+      ],
+      "p50Ms": 1252,
+      "p95Ms": 1252,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__004-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__004-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:15.546Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__005-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "ok",
+      "latencyMs": 1252,
+      "samples": [
+        {
+          "latencyMs": 1252,
+          "timestamp": "2026-07-21T15:01:17.776Z"
+        }
+      ],
+      "p50Ms": 1252,
+      "p95Ms": 1252,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__005-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros__005-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:17.776Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__006-conoce-mas",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[href=\"https://www.magneto365.com/co/empresas/ficohsa?utm_source=website&utm_medium=boton_1&utm_campaign=Always%20on\"]:has-text(\"Conoce más ›\")",
+      "text": "Conoce más ›",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "skipped",
+      "skipReason": "CTA externo (www.magneto365.com) — fuera de alcance",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:01:17.776Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__007-conocer-mas",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[href=\"https://www.magneto365.com/co/empresas/ficohsa?utm_source=website&utm_medium=boton_3&utm_campaign=Always%20on\"]:has-text(\"Conocer más\")",
+      "text": "Conocer más",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "skipped",
+      "skipReason": "CTA externo (www.magneto365.com) — fuera de alcance",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:01:17.776Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__008-conoce-mas",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[href=\"https://www.magneto365.com/co/empresas/ficohsa?utm_source=website&utm_medium=boton_1&utm_campaign=Always%20on\"]:has-text(\"Conoce más ›\")",
+      "text": "Conoce más ›",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "skipped",
+      "skipReason": "CTA externo (www.magneto365.com) — fuera de alcance",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:01:17.776Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros__009-conoce-mas",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros",
+      "pageTitle": "Trabaja con nosotros | Ficohsa Corporativo",
+      "selector": "a[href=\"https://www.magneto365.com/co/empresas/ficohsa?utm_source=website&utm_medium=boton_1&utm_campaign=Always%20on\"]:has-text(\"Conoce más ›\")",
+      "text": "Conoce más ›",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros",
+      "status": "skipped",
+      "skipReason": "CTA externo (www.magneto365.com) — fuera de alcance",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:01:17.776Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__000-ver-mas",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(2)",
+      "text": "Ver más",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 689,
+      "samples": [
+        {
+          "latencyMs": 689,
+          "timestamp": "2026-07-21T15:01:20.757Z"
+        }
+      ],
+      "p50Ms": 689,
+      "p95Ms": 689,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__000-ver-mas-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__000-ver-mas-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:20.757Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__001-honduras",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(3)",
+      "text": "Honduras",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 616,
+      "samples": [
+        {
+          "latencyMs": 616,
+          "timestamp": "2026-07-21T15:01:22.254Z"
+        }
+      ],
+      "p50Ms": 616,
+      "p95Ms": 616,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__001-honduras-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__001-honduras-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:22.254Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__002-1",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(6)",
+      "text": "1",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 453,
+      "samples": [
+        {
+          "latencyMs": 453,
+          "timestamp": "2026-07-21T15:01:23.718Z"
+        }
+      ],
+      "p50Ms": 453,
+      "p95Ms": 453,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__002-1-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__002-1-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:23.718Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__003-2",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(7)",
+      "text": "2",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 1054,
+      "samples": [
+        {
+          "latencyMs": 1054,
+          "timestamp": "2026-07-21T15:01:25.967Z"
+        }
+      ],
+      "p50Ms": 1054,
+      "p95Ms": 1054,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__003-2-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__003-2-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:25.967Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__004-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 766,
+      "samples": [
+        {
+          "latencyMs": 766,
+          "timestamp": "2026-07-21T15:01:27.491Z"
+        }
+      ],
+      "p50Ms": 766,
+      "p95Ms": 766,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__004-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__004-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:27.491Z"
+    },
+    {
+      "id": "acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__005-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pagePath": "/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "pageTitle": "Somos Grupo Ficohsa | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/acerca-de-ficohsa/trabaja-con-nosotros/somos-grupo-ficohsa",
+      "status": "ok",
+      "latencyMs": 764,
+      "samples": [
+        {
+          "latencyMs": 764,
+          "timestamp": "2026-07-21T15:01:28.968Z"
+        }
+      ],
+      "p50Ms": 764,
+      "p95Ms": 764,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__005-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/acerca-de-ficohsa-trabaja-con-nosotros-somos-gru__005-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:28.968Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__000-nuestra-empresa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(2)",
+      "text": "Nuestra Empresa",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 631,
+      "samples": [
+        {
+          "latencyMs": 631,
+          "timestamp": "2026-07-21T15:01:30.940Z"
+        }
+      ],
+      "p50Ms": 631,
+      "p95Ms": 631,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__000-nuestra-empresa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__000-nuestra-empresa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:30.940Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__001-nuestra-gente",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(3)",
+      "text": "Nuestra Gente",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 649,
+      "samples": [
+        {
+          "latencyMs": 649,
+          "timestamp": "2026-07-21T15:01:32.139Z"
+        }
+      ],
+      "p50Ms": 649,
+      "p95Ms": 649,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__001-nuestra-gente-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__001-nuestra-gente-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:32.139Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__002-nuestro-planeta",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(4)",
+      "text": "Nuestro Planeta",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 666,
+      "samples": [
+        {
+          "latencyMs": 666,
+          "timestamp": "2026-07-21T15:01:33.358Z"
+        }
+      ],
+      "p50Ms": 666,
+      "p95Ms": 666,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__002-nuestro-planeta-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__002-nuestro-planeta-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:33.358Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__003-nuestra-comunidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(5)",
+      "text": "Nuestra Comunidad",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 649,
+      "samples": [
+        {
+          "latencyMs": 649,
+          "timestamp": "2026-07-21T15:01:34.591Z"
+        }
+      ],
+      "p50Ms": 649,
+      "p95Ms": 649,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__003-nuestra-comunidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__003-nuestra-comunidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:34.591Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__004-programa-de-educacion-financiera",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(6)",
+      "text": "Programa de Educación Financiera",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 899,
+      "samples": [
+        {
+          "latencyMs": 899,
+          "timestamp": "2026-07-21T15:01:36.011Z"
+        }
+      ],
+      "p50Ms": 899,
+      "p95Ms": 899,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__004-programa-de-educacion-financiera-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__004-programa-de-educacion-financiera-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:36.011Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__005-programa-de-etica-institucional",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(7)",
+      "text": "Programa de Ética institucional",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 695,
+      "samples": [
+        {
+          "latencyMs": 695,
+          "timestamp": "2026-07-21T15:01:37.192Z"
+        }
+      ],
+      "p50Ms": 695,
+      "p95Ms": 695,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__005-programa-de-etica-institucional-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__005-programa-de-etica-institucional-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:37.192Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__006-programa-de-medio-ambiente",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(8)",
+      "text": "Programa de Medio Ambiente",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 668,
+      "samples": [
+        {
+          "latencyMs": 668,
+          "timestamp": "2026-07-21T15:01:38.367Z"
+        }
+      ],
+      "p50Ms": 668,
+      "p95Ms": 668,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__006-programa-de-medio-ambiente-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__006-programa-de-medio-ambiente-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:38.367Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__007-de-mi-tierra",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(9)",
+      "text": "De Mi Tierra",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 684,
+      "samples": [
+        {
+          "latencyMs": 684,
+          "timestamp": "2026-07-21T15:01:39.534Z"
+        }
+      ],
+      "p50Ms": 684,
+      "p95Ms": 684,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__007-de-mi-tierra-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__007-de-mi-tierra-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:39.534Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__008-programa-de-tu-bienestar",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(10)",
+      "text": "Programa de Tu BienEstar",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 721,
+      "samples": [
+        {
+          "latencyMs": 721,
+          "timestamp": "2026-07-21T15:01:40.699Z"
+        }
+      ],
+      "p50Ms": 721,
+      "p95Ms": 721,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__008-programa-de-tu-bienestar-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__008-programa-de-tu-bienestar-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:40.699Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__009-programa-de-voluntariado-corporativo-integrarse",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(11)",
+      "text": "Programa de Voluntariado Corporativo IntegraRSE",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 751,
+      "samples": [
+        {
+          "latencyMs": 751,
+          "timestamp": "2026-07-21T15:01:41.918Z"
+        }
+      ],
+      "p50Ms": 751,
+      "p95Ms": 751,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__009-programa-de-voluntariado-corporativo-integrarse-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__009-programa-de-voluntariado-corporativo-integrarse-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:41.918Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__010-memoria-de-sustentabilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(12)",
+      "text": "Memoria de Sustentabilidad",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 709,
+      "samples": [
+        {
+          "latencyMs": 709,
+          "timestamp": "2026-07-21T15:01:43.075Z"
+        }
+      ],
+      "p50Ms": 709,
+      "p95Ms": 709,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__010-memoria-de-sustentabilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__010-memoria-de-sustentabilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:43.075Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__011-programa-de-fortalecimiento-de-la-cadena-product",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(13)",
+      "text": "Programa de Fortalecimiento de la Cadena Productiva",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 699,
+      "samples": [
+        {
+          "latencyMs": 699,
+          "timestamp": "2026-07-21T15:01:44.234Z"
+        }
+      ],
+      "p50Ms": 699,
+      "p95Ms": 699,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__011-programa-de-fortalecimiento-de-la-cadena-product-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__011-programa-de-fortalecimiento-de-la-cadena-product-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:44.234Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__012-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 705,
+      "samples": [
+        {
+          "latencyMs": 705,
+          "timestamp": "2026-07-21T15:01:45.406Z"
+        }
+      ],
+      "p50Ms": 705,
+      "p95Ms": 705,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__012-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__012-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:45.406Z"
+    },
+    {
+      "id": "sostenibilidad-estrategia-sostenibilidad__013-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "pagePath": "/sostenibilidad/estrategia-sostenibilidad",
+      "pageTitle": "Estrategia de Sostenibilidad | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/estrategia-sostenibilidad",
+      "status": "ok",
+      "latencyMs": 662,
+      "samples": [
+        {
+          "latencyMs": 662,
+          "timestamp": "2026-07-21T15:01:46.581Z"
+        }
+      ],
+      "p50Ms": 662,
+      "p95Ms": 662,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__013-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-estrategia-sostenibilidad__013-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:46.581Z"
+    },
+    {
+      "id": "sostenibilidad-fundacion-ficohsa__000-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "pagePath": "/sostenibilidad/fundacion-ficohsa",
+      "pageTitle": "Fundación Ficohsa | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "status": "ok",
+      "latencyMs": 1090,
+      "samples": [
+        {
+          "latencyMs": 1090,
+          "timestamp": "2026-07-21T15:01:49.381Z"
+        }
+      ],
+      "p50Ms": 1090,
+      "p95Ms": 1090,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "jQuery is not defined",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__000-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__000-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:49.381Z"
+    },
+    {
+      "id": "sostenibilidad-fundacion-ficohsa__001-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "pagePath": "/sostenibilidad/fundacion-ficohsa",
+      "pageTitle": "Fundación Ficohsa | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "status": "ok",
+      "latencyMs": 1138,
+      "samples": [
+        {
+          "latencyMs": 1138,
+          "timestamp": "2026-07-21T15:01:51.227Z"
+        }
+      ],
+      "p50Ms": 1138,
+      "p95Ms": 1138,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "jQuery is not defined",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__001-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__001-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:51.227Z"
+    },
+    {
+      "id": "sostenibilidad-fundacion-ficohsa__002-ver-todos-los-programas",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "pagePath": "/sostenibilidad/fundacion-ficohsa",
+      "pageTitle": "Fundación Ficohsa | Ficohsa Corporativo",
+      "selector": "a[href=\"/sostenibilidad/fundacion-ficohsa/nuestros-programas\"]:has-text(\"Ver todos los programas\")",
+      "text": "Ver todos los programas",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa/nuestros-programas",
+      "status": "ok",
+      "latencyMs": 1041,
+      "samples": [
+        {
+          "latencyMs": 1041,
+          "timestamp": "2026-07-21T15:01:52.983Z"
+        }
+      ],
+      "p50Ms": 1041,
+      "p95Ms": 1041,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "jQuery is not defined",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__002-ver-todos-los-programas-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__002-ver-todos-los-programas-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:52.983Z"
+    },
+    {
+      "id": "sostenibilidad-fundacion-ficohsa__003-conoce-nuestros-logros",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "pagePath": "/sostenibilidad/fundacion-ficohsa",
+      "pageTitle": "Fundación Ficohsa | Ficohsa Corporativo",
+      "selector": "a[href=\"/sostenibilidad/fundacion-ficohsa/logros-en-cifras\"]:has-text(\"Conoce nuestros logros\")",
+      "text": "Conoce nuestros logros",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/fundacion-ficohsa/logros-en-cifras",
+      "status": "ok",
+      "latencyMs": 942,
+      "samples": [
+        {
+          "latencyMs": 942,
+          "timestamp": "2026-07-21T15:01:54.536Z"
+        }
+      ],
+      "p50Ms": 942,
+      "p95Ms": 942,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "jQuery is not defined",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__003-conoce-nuestros-logros-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-fundacion-ficohsa__003-conoce-nuestros-logros-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:54.536Z"
+    },
+    {
+      "id": "sostenibilidad-tu-conciencia-financiera__000-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "pagePath": "/sostenibilidad/tu-conciencia-financiera",
+      "pageTitle": "Tu Conciencia Financiera | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "status": "ok",
+      "latencyMs": 605,
+      "samples": [
+        {
+          "latencyMs": 605,
+          "timestamp": "2026-07-21T15:01:56.659Z"
+        }
+      ],
+      "p50Ms": 605,
+      "p95Ms": 605,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__000-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__000-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:56.659Z"
+    },
+    {
+      "id": "sostenibilidad-tu-conciencia-financiera__001-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "pagePath": "/sostenibilidad/tu-conciencia-financiera",
+      "pageTitle": "Tu Conciencia Financiera | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "status": "ok",
+      "latencyMs": 561,
+      "samples": [
+        {
+          "latencyMs": 561,
+          "timestamp": "2026-07-21T15:01:57.907Z"
+        }
+      ],
+      "p50Ms": 561,
+      "p95Ms": 561,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__001-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__001-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:57.907Z"
+    },
+    {
+      "id": "sostenibilidad-tu-conciencia-financiera__002-conoce-mas",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "pagePath": "/sostenibilidad/tu-conciencia-financiera",
+      "pageTitle": "Tu Conciencia Financiera | Ficohsa Corporativo",
+      "selector": "a[href=\"/sostenibilidad/tu-conciencia-financiera/articulos\"]:has-text(\"Conoce más\")",
+      "text": "Conoce más",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera/articulos",
+      "status": "ok",
+      "latencyMs": 975,
+      "samples": [
+        {
+          "latencyMs": 975,
+          "timestamp": "2026-07-21T15:01:59.484Z"
+        }
+      ],
+      "p50Ms": 975,
+      "p95Ms": 975,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__002-conoce-mas-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-tu-conciencia-financiera__002-conoce-mas-r1__after.png",
+      "auditedAt": "2026-07-21T15:01:59.484Z"
+    },
+    {
+      "id": "sostenibilidad-tu-conciencia-financiera__003-escuchalo-aqui",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "pagePath": "/sostenibilidad/tu-conciencia-financiera",
+      "pageTitle": "Tu Conciencia Financiera | Ficohsa Corporativo",
+      "selector": "a[href=\"https://tr.ee/i4956NcO35\"]:has-text(\"Escúchalo aquí\")",
+      "text": "Escúchalo aquí",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/tu-conciencia-financiera",
+      "status": "skipped",
+      "skipReason": "CTA externo (tr.ee) — fuera de alcance",
+      "latencyMs": 0,
+      "samples": [],
+      "p50Ms": null,
+      "p95Ms": null,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [],
+      "networkErrors": [],
+      "auditedAt": "2026-07-21T15:01:59.484Z"
+    },
+    {
+      "id": "sostenibilidad-mujeres-adelante__000-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "pagePath": "/sostenibilidad/mujeres-adelante",
+      "pageTitle": "Mujeres Adelante | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "status": "ok",
+      "latencyMs": 1121,
+      "samples": [
+        {
+          "latencyMs": 1121,
+          "timestamp": "2026-07-21T15:02:02.013Z"
+        }
+      ],
+      "p50Ms": 1121,
+      "p95Ms": 1121,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__000-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__000-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:02.013Z"
+    },
+    {
+      "id": "sostenibilidad-mujeres-adelante__001-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "pagePath": "/sostenibilidad/mujeres-adelante",
+      "pageTitle": "Mujeres Adelante | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "status": "ok",
+      "latencyMs": 1244,
+      "samples": [
+        {
+          "latencyMs": 1244,
+          "timestamp": "2026-07-21T15:02:03.908Z"
+        }
+      ],
+      "p50Ms": 1244,
+      "p95Ms": 1244,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__001-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__001-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:03.908Z"
+    },
+    {
+      "id": "sostenibilidad-mujeres-adelante__002-quiero-saber-mas",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "pagePath": "/sostenibilidad/mujeres-adelante",
+      "pageTitle": "Mujeres Adelante | Ficohsa Corporativo",
+      "selector": "a[href=\"/sostenibilidad/mujeres-adelante/donde-estamos\"]:has-text(\"Quiero saber más\")",
+      "text": "Quiero saber más",
+      "kind": "cta-link",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/mujeres-adelante/donde-estamos",
+      "status": "ok",
+      "latencyMs": 1111,
+      "samples": [
+        {
+          "latencyMs": 1111,
+          "timestamp": "2026-07-21T15:02:05.695Z"
+        }
+      ],
+      "p50Ms": 1111,
+      "p95Ms": 1111,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "networkErrors": [],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__002-quiero-saber-mas-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-mujeres-adelante__002-quiero-saber-mas-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:05.695Z"
+    },
+    {
+      "id": "sostenibilidad-de-mi-tierra__000-previous",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "pagePath": "/sostenibilidad/de-mi-tierra",
+      "pageTitle": "De Mi Tierra | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(2)",
+      "text": "Previous",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "status": "ok",
+      "latencyMs": 847,
+      "samples": [
+        {
+          "latencyMs": 847,
+          "timestamp": "2026-07-21T15:02:10.502Z"
+        }
+      ],
+      "p50Ms": 847,
+      "p95Ms": 847,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__000-previous-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__000-previous-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:10.502Z"
+    },
+    {
+      "id": "sostenibilidad-de-mi-tierra__001-next",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "pagePath": "/sostenibilidad/de-mi-tierra",
+      "pageTitle": "De Mi Tierra | Ficohsa Corporativo",
+      "selector": "button:nth-of-type(3)",
+      "text": "Next",
+      "kind": "button",
+      "tagName": "button",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "status": "ok",
+      "latencyMs": 861,
+      "samples": [
+        {
+          "latencyMs": 861,
+          "timestamp": "2026-07-21T15:02:13.367Z"
+        }
+      ],
+      "p50Ms": 861,
+      "p95Ms": 861,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__001-next-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__001-next-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:13.367Z"
+    },
+    {
+      "id": "sostenibilidad-de-mi-tierra__002-acerca-de-ficohsa",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "pagePath": "/sostenibilidad/de-mi-tierra",
+      "pageTitle": "De Mi Tierra | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(1)",
+      "text": "Acerca de Ficohsa",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "status": "ok",
+      "latencyMs": 1151,
+      "samples": [
+        {
+          "latencyMs": 1151,
+          "timestamp": "2026-07-21T15:02:15.187Z"
+        }
+      ],
+      "p50Ms": 1151,
+      "p95Ms": 1151,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__002-acerca-de-ficohsa-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__002-acerca-de-ficohsa-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:15.187Z"
+    },
+    {
+      "id": "sostenibilidad-de-mi-tierra__003-sostenibilidad",
+      "pageUrl": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "pagePath": "/sostenibilidad/de-mi-tierra",
+      "pageTitle": "De Mi Tierra | Ficohsa Corporativo",
+      "selector": "a[role=\"button\"]:nth-of-type(2)",
+      "text": "Sostenibilidad",
+      "kind": "role-button",
+      "tagName": "a",
+      "urlBefore": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "urlAfter": "https://www.grupoficohsa.com/sostenibilidad/de-mi-tierra",
+      "status": "ok",
+      "latencyMs": 1121,
+      "samples": [
+        {
+          "latencyMs": 1121,
+          "timestamp": "2026-07-21T15:02:17.015Z"
+        }
+      ],
+      "p50Ms": 1121,
+      "p95Ms": 1121,
+      "slow": false,
+      "broken": false,
+      "consoleErrors": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Failed to load resource: the server responded with a status of 404 ()",
+        "Cannot read properties of undefined (reading 'addEventListener')",
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "networkErrors": [
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg",
+        "404 https://www.grupoficohsa.com/content/dam/corporativo-site/de-mi-tierra/im%C3%A1genes-de-proyectos/img12.jpg"
+      ],
+      "screenshotBefore": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__003-sostenibilidad-r1__before.png",
+      "screenshotAfter": "evidence/screenshots/button-audit/sostenibilidad-de-mi-tierra__003-sostenibilidad-r1__after.png",
+      "auditedAt": "2026-07-21T15:02:17.015Z"
+    }
+  ]
+}

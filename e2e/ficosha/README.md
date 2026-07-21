@@ -46,6 +46,17 @@ npx playwright test e2e/ficosha/button-audit.spec.ts
 
 Logout, pagos reales, borrados, envíos irreversibles, newsletter submit, enlaces externos y controles deshabilitados.
 
+### Última ejecución (2026-07-21)
+
+| Resultado | Valor |
+|-----------|-------|
+| **Páginas auditadas** | 11 (nav principal + secciones clave) |
+| **Controles inventariados** | 68 |
+| **OK / Error / Skipped** | 59 / 2 / 7 |
+| **Lentos (>2 s)** | 0 |
+| **p50 / p95 (ok)** | 709 ms / 1255 ms |
+| **Hallazgo** | CTA «Prensa Ficohsa» en home no visible tras recarga (2 errores) |
+
 ---
 
 ## HU-ARQ-001 — Arquitectura SSR / Microfrontends
