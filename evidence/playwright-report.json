@@ -4,7 +4,8 @@
       "/exec-daemon/node",
       "/workspace/node_modules/.bin/playwright",
       "test",
-      "e2e/ficosha/hu-arq-001.spec.ts"
+      "e2e/ficosha/button-audit.spec.ts",
+      "--project=ficosha-button-audit"
     ],
     "configFile": "/workspace/playwright.config.ts",
     "rootDir": "/workspace/e2e",
@@ -32,9 +33,27 @@
         "id": "ficosha-chromium",
         "name": "ficosha-chromium",
         "testDir": "/workspace/e2e",
-        "testIgnore": [],
+        "testIgnore": [
+          "**/button-audit.spec.ts"
+        ],
         "testMatch": [
           "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/workspace/evidence/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "ficosha-button-audit",
+        "name": "ficosha-button-audit",
+        "testDir": "/workspace/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/button-audit.spec.ts"
         ],
         "timeout": 90000
       }
@@ -73,349 +92,67 @@
   },
   "suites": [
     {
-      "title": "ficosha/hu-arq-001.spec.ts",
-      "file": "ficosha/hu-arq-001.spec.ts",
+      "title": "ficosha/button-audit.spec.ts",
+      "file": "ficosha/button-audit.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha",
-          "file": "ficosha/hu-arq-001.spec.ts",
-          "line": 21,
+          "title": "Auditoría de botones — Ficohsa @ficosha @button-audit",
+          "file": "ficosha/button-audit.spec.ts",
+          "line": 20,
           "column": 6,
           "specs": [
             {
-              "title": "TC-ARQ-001-01: Carga inicial SSR dentro del tiempo máximo (CA-RN01-01 / RN-01)",
+              "title": "BTN-AUDIT-001: Inventario y medición de latencia en botones visibles",
               "ok": true,
               "tags": [
-                "ficosha"
+                "ficosha",
+                "button-audit"
               ],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 1200000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
+                  "projectId": "ficosha-button-audit",
+                  "projectName": "ficosha-button-audit",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2335,
+                      "duration": 129399,
                       "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:09:34.167Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-41dbb50af87af21f5aed",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 23,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-02: Documento SSR entregado con contenido HTML válido (RN-01)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2214,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:09:36.584Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-51d6dbcb789acef735d5",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 70,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-03: Contenido principal visible sin pantalla en blanco (RN-01 / HU visitante)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2365,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:09:38.806Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-1e78bb8354ad755844ad",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 112,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-04: Sin errores críticos de consola en carga inicial (CA-RN02-01 / RN-02)",
-              "ok": false,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 6270,
-                      "error": {
-                        "message": "Error: Errores críticos de consola detectados: The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. | Cannot read properties of null (reading 'getAttribute') | Cannot read properties of undefined (reading 'addEventListener')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m3\u001b[39m\nReceived array:  \u001b[31m[\"The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.\", \"Cannot read properties of null (reading 'getAttribute')\", \"Cannot read properties of undefined (reading 'addEventListener')\"]\u001b[39m",
-                        "stack": "Error: Errores críticos de consola detectados: The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. | Cannot read properties of null (reading 'getAttribute') | Cannot read properties of undefined (reading 'addEventListener')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m3\u001b[39m\nReceived array:  \u001b[31m[\"The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.\", \"Cannot read properties of null (reading 'getAttribute')\", \"Cannot read properties of undefined (reading 'addEventListener')\"]\u001b[39m\n    at /workspace/e2e/ficosha/hu-arq-001.spec.ts:174:9",
-                        "location": {
-                          "file": "/workspace/e2e/ficosha/hu-arq-001.spec.ts",
-                          "column": 9,
-                          "line": 174
-                        },
-                        "snippet": "  172 |         critical,\n  173 |         `Errores críticos de consola detectados: ${critical.join(' | ')}`,\n> 174 |       ).toHaveLength(0);\n      |         ^\n  175 |\n  176 |       screenshot = await captureScreenshot(page, testId);\n  177 |     } catch (err) {"
-                      },
-                      "errors": [
+                      "stdout": [
                         {
-                          "location": {
-                            "file": "/workspace/e2e/ficosha/hu-arq-001.spec.ts",
-                            "column": 9,
-                            "line": 174
-                          },
-                          "message": "Error: Errores críticos de consola detectados: The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. | Cannot read properties of null (reading 'getAttribute') | Cannot read properties of undefined (reading 'addEventListener')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m3\u001b[39m\nReceived array:  \u001b[31m[\"The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.\", \"Cannot read properties of null (reading 'getAttribute')\", \"Cannot read properties of undefined (reading 'addEventListener')\"]\u001b[39m\n\n  172 |         critical,\n  173 |         `Errores críticos de consola detectados: ${critical.join(' | ')}`,\n> 174 |       ).toHaveLength(0);\n      |         ^\n  175 |\n  176 |       screenshot = await captureScreenshot(page, testId);\n  177 |     } catch (err) {\n    at /workspace/e2e/ficosha/hu-arq-001.spec.ts:174:9"
+                          "text": "[button-audit] páginas=12 total=69 ok=62 error=1 skipped=6 slow=1 p50=772ms p95=1810ms umbral_lento=2000ms\n"
                         }
                       ],
-                      "stdout": [],
-                      "stderr": [],
+                      "stderr": [
+                        {
+                          "text": "[button-audit] Botones rotos: home__005-prensa-ficohsa: Control no visible en viewport tras recarga\n"
+                        }
+                      ],
                       "retry": 0,
-                      "startTime": "2026-07-21T14:09:41.178Z",
+                      "startTime": "2026-07-21T20:08:26.990Z",
                       "annotations": [],
                       "attachments": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/workspace/evidence/test-results/ficosha-hu-arq-001-HU-ARQ--7729e-a-inicial-CA-RN02-01-RN-02--ficosha-chromium/test-failed-1.png"
-                        },
-                        {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "/workspace/evidence/test-results/ficosha-hu-arq-001-HU-ARQ--7729e-a-inicial-CA-RN02-01-RN-02--ficosha-chromium/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/workspace/evidence/test-results/ficosha-hu-arq-001-HU-ARQ--7729e-a-inicial-CA-RN02-01-RN-02--ficosha-chromium/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/workspace/evidence/test-results/ficosha-hu-arq-001-HU-ARQ--7729e-a-inicial-CA-RN02-01-RN-02--ficosha-chromium/trace.zip"
+                          "path": "/workspace/evidence/test-results/ficosha-button-audit-Audit-ae0fa-atencia-en-botones-visibles-ficosha-button-audit/video.webm"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/workspace/e2e/ficosha/hu-arq-001.spec.ts",
-                        "column": 9,
-                        "line": 174
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-095cf8380114b1dc47b1",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 152,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-05: Recursos de integración cargan sin fallos HTTP ≥ 400 (CA-RN02-01 / RN-02)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2872,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:09:49.662Z",
-                      "annotations": [],
-                      "attachments": []
+                      ]
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "53ba01aed450221f2ed8-7889d88e8c7c81974967",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 199,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-06: Navegación interna fluida entre secciones SSR (RN-02 / HU visitante)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 69002,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:09:52.614Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-34528be7ded780b9d8e6",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 250,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-07: UI controlada visible — sin página de error del servidor (CA-RN02-02 / RN-02)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2743,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:11:01.624Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-67814ab752edc0b3b60b",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 312,
-              "column": 3
-            },
-            {
-              "title": "TC-ARQ-001-08: Métricas de performance inicial registradas para auditoría (RN-01)",
-              "ok": true,
-              "tags": [
-                "ficosha"
-              ],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "ficosha-chromium",
-                  "projectName": "ficosha-chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2719,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-21T14:11:04.377Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "53ba01aed450221f2ed8-bf78f55cdf687138322a",
-              "file": "ficosha/hu-arq-001.spec.ts",
-              "line": 363,
+              "id": "192ad21742f5bc5a15c2-c87cf7d8c2ee19ba5a91",
+              "file": "ficosha/button-audit.spec.ts",
+              "line": 23,
               "column": 3
             }
           ]
@@ -425,11 +162,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-21T14:09:33.567Z",
-    "duration": 93627.422,
-    "expected": 7,
+    "startTime": "2026-07-21T20:08:26.473Z",
+    "duration": 130073.513,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

@@ -50,12 +50,12 @@ Logout, pagos reales, borrados, envíos irreversibles, newsletter submit, enlace
 
 | Resultado | Valor |
 |-----------|-------|
-| **Páginas auditadas** | 11 (nav principal + secciones clave) |
-| **Controles inventariados** | 68 |
-| **OK / Error / Skipped** | 59 / 2 / 7 |
-| **Lentos (>2 s)** | 0 |
-| **p50 / p95 (ok)** | 709 ms / 1255 ms |
-| **Hallazgo** | CTA «Prensa Ficohsa» en home no visible tras recarga (2 errores) |
+| **Páginas auditadas** | 12 (home + nav principal + secciones clave) |
+| **Controles inventariados** | 69 |
+| **OK / Error / Skipped** | 62 / 1 / 6 |
+| **Lentos (>2 s)** | 1 (`Ver` en `/sostenibilidad/hecho-en-casa`, 2915 ms) |
+| **p50 / p95 (ok)** | 772 ms / 1810 ms |
+| **Hallazgo** | CTA «Prensa Ficohsa» en home no visible tras recarga (1 error) |
 
 ---
 
