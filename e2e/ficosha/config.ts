@@ -18,3 +18,7 @@ export const EVIDENCE_DIR = 'evidence';
 export const SCREENSHOTS_DIR = `${EVIDENCE_DIR}/screenshots`;
 export const VIDEO_DIR = `${EVIDENCE_DIR}/video`;
 export const RESULTS_JSON = `${EVIDENCE_DIR}/test-results.json`;
+export const TIMINGS_JSON = `${EVIDENCE_DIR}/timings.json`;
+
+/** Auditoría de botones — umbral lento por defecto 2 s */
+export const BUTTON_SLOW_THRESHOLD_MS = Number(process.env.BUTTON_SLOW_THRESHOLD_MS ?? 2000);
