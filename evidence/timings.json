@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "JA-BTN-0001",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 2293,
+    "latenciesMs": [
+      2293
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0001-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0001-after.png",
+    "timestamp": "2026-07-21T20:55:08.023Z"
+  },
+  {
+    "id": "JA-BTN-0002",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1191,
+    "latenciesMs": [
+      1191
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Access to fetch at 'https://servicios.jardinazuayo.fin.ec/ubicaciones-api-ws/datosMapa?tipoId=0&ciudadId=0' from origin 'https://www.jardinazuayo.fin.ec' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "TypeError: Failed to fetch\n    at obtenerDatos (https://www.jardinazuayo.fin.ec/encuentranos/:1591:39)\n    at initialize (https://www.jardinazuayo.fin.ec/encuentranos/:1603:7)\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:333:152\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:332:146",
+      "Cannot read properties of undefined (reading 'length')"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0002-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0002-after.png",
+    "timestamp": "2026-07-21T20:55:14.904Z"
+  },
+  {
+    "id": "JA-BTN-0003",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a#slider-1-slide-214-layer-7.rs-layer.customFont",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/calculadoras-credito-ahorro/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/",
+    "status": "ok",
+    "latencyMs": 428,
+    "latenciesMs": [
+      428
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0003-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0003-after.png",
+    "timestamp": "2026-07-21T20:55:21.171Z"
+  },
+  {
+    "id": "JA-BTN-0004",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Calcular interés",
+    "tagName": "a",
+    "role": null,
+    "href": "https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros",
+    "status": "ok",
+    "latencyMs": 596,
+    "latenciesMs": [
+      596
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "networkErrors": [
+      "404 https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros"
+    ],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0004-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0004-after.png",
+    "timestamp": "2026-07-21T20:55:26.547Z"
+  },
+  {
+    "id": "JA-BTN-0005",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Calcular interés",
+    "tagName": "a",
+    "role": null,
+    "href": "https://calculadora.jardinazuayo.fin.ec/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://calculadora.jardinazuayo.fin.ec/",
+    "status": "ok",
+    "latencyMs": 732,
+    "latenciesMs": [
+      732
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0005-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0005-after.png",
+    "timestamp": "2026-07-21T20:55:33.099Z"
+  },
+  {
+    "id": "JA-BTN-0006",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Necesito más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/linea-de-credito/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/",
+    "status": "ok",
+    "latencyMs": 456,
+    "latenciesMs": [
+      456
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0006-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0006-after.png",
+    "timestamp": "2026-07-21T20:55:39.443Z"
+  },
+  {
+    "id": "JA-BTN-0007",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/",
+    "pageTitle": "Inicio - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 2695,
+    "latenciesMs": [
+      2695
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0007-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0007-after.png",
+    "timestamp": "2026-07-21T20:55:46.949Z"
+  },
+  {
+    "id": "JA-BTN-0008",
+    "pageUrl": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "pageTitle": "Sigma-Turnos",
+    "selector": "button.MuiButton-root.MuiButton-contained",
+    "text": "Generar Turno",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "urlAfter": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "status": "ok",
+    "latencyMs": 530,
+    "latenciesMs": [
+      530
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0008-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0008-after.png",
+    "timestamp": "2026-07-21T20:55:52.020Z"
+  },
+  {
+    "id": "JA-BTN-0009",
+    "pageUrl": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "pageTitle": "Sigma-Turnos",
+    "selector": "button.MuiButton-root.MuiButton-contained",
+    "text": "Consultar/Anular Turno",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "urlAfter": "https://servicios.jardinazuayo.fin.ec/turnos-virtual-app/",
+    "status": "ok",
+    "latencyMs": 408,
+    "latenciesMs": [
+      408
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0009-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0009-after.png",
+    "timestamp": "2026-07-21T20:55:53.449Z"
+  },
+  {
+    "id": "JA-BTN-0010",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/historia/",
+    "pageTitle": "Historia - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/historia/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/historia/",
+    "status": "error",
+    "latencyMs": 8000,
+    "latenciesMs": [
+      8000
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0010-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0010-after.png",
+    "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:visible').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" class=\"thm-btn\" aria-label=\"search submit\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+    "timestamp": "2026-07-21T20:56:28.534Z"
+  },
+  {
+    "id": "JA-BTN-0011",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nosotros/",
+    "pageTitle": "Nosotros - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nosotros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 2202,
+    "latenciesMs": [
+      2202
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0011-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0011-after.png",
+    "timestamp": "2026-07-21T20:56:37.868Z"
+  },
+  {
+    "id": "JA-BTN-0012",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nosotros/",
+    "pageTitle": "Nosotros - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nosotros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1164,
+    "latenciesMs": [
+      1164
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0012-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0012-after.png",
+    "timestamp": "2026-07-21T20:56:42.421Z"
+  },
+  {
+    "id": "JA-BTN-0013",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1336,
+    "latenciesMs": [
+      1336
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0013-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0013-after.png",
+    "timestamp": "2026-07-21T20:56:51.682Z"
+  },
+  {
+    "id": "JA-BTN-0014",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1141,
+    "latenciesMs": [
+      1141
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0014-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0014-after.png",
+    "timestamp": "2026-07-21T20:56:57.269Z"
+  },
+  {
+    "id": "JA-BTN-0015",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "a#slider-6-slide-8-layer-10.rs-layer.rev-btn",
+    "text": "Solicitar cuenta",
+    "tagName": "a",
+    "role": null,
+    "href": "https://servicios.jardinazuayo.fin.ec/sociovirtual/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "status": "ok",
+    "latencyMs": 464,
+    "latenciesMs": [
+      464
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0015-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0015-after.png",
+    "timestamp": "2026-07-21T20:57:02.237Z"
+  },
+  {
+    "id": "JA-BTN-0016",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Abrir cuenta de ahorros",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/ahorros-a-la-vista/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/ahorros-a-la-vista/",
+    "status": "ok",
+    "latencyMs": 2286,
+    "latenciesMs": [
+      2286
+    ],
+    "slow": true,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "networkErrors": [
+      "404 https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros"
+    ],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0016-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0016-after.png",
+    "timestamp": "2026-07-21T20:57:07.848Z"
+  },
+  {
+    "id": "JA-BTN-0017",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Contratar Certificado de Depósito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/certificado-de-deposito-o-deposito-a-plazo-fijo/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/certificado-de-deposito-o-deposito-a-plazo-fijo/",
+    "status": "ok",
+    "latencyMs": 1378,
+    "latenciesMs": [
+      1378
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "networkErrors": [
+      "404 https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros"
+    ],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0017-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0017-after.png",
+    "timestamp": "2026-07-21T20:57:13.556Z"
+  },
+  {
+    "id": "JA-BTN-0018",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "pageTitle": "Ahorros - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Contratar Ahorro Chanchito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/ahorro-mi-chanchito/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/ahorros/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/ahorro-mi-chanchito/",
+    "status": "ok",
+    "latencyMs": 1684,
+    "latenciesMs": [
+      1684
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "networkErrors": [
+      "404 https://servicios.jardinazuayo.fin.ec/calculadora-ja-app/calculadoraAhorros"
+    ],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0018-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0018-after.png",
+    "timestamp": "2026-07-21T20:57:19.588Z"
+  },
+  {
+    "id": "JA-BTN-0019",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1516,
+    "latenciesMs": [
+      1516
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0019-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0019-after.png",
+    "timestamp": "2026-07-21T20:57:31.565Z"
+  },
+  {
+    "id": "JA-BTN-0020",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1124,
+    "latenciesMs": [
+      1124
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0020-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0020-after.png",
+    "timestamp": "2026-07-21T20:57:38.714Z"
+  },
+  {
+    "id": "JA-BTN-0021",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a#slider-21-slide-23-layer-11.rs-layer.rev-btn",
+    "text": "Calcular crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://calculadora.jardinazuayo.fin.ec/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 455,
+    "latenciesMs": [
+      455
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0021-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0021-after.png",
+    "timestamp": "2026-07-21T20:57:44.856Z"
+  },
+  {
+    "id": "JA-BTN-0022",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "ORDINARIO",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/credito-ordinario/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/credito-ordinario/",
+    "status": "ok",
+    "latencyMs": 1431,
+    "latenciesMs": [
+      1431
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0022-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0022-after.png",
+    "timestamp": "2026-07-21T20:57:51.268Z"
+  },
+  {
+    "id": "JA-BTN-0023",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "SIN AHORRO",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/credito-sin-ahorro/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/credito-sin-ahorro/",
+    "status": "ok",
+    "latencyMs": 1351,
+    "latenciesMs": [
+      1351
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0023-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0023-after.png",
+    "timestamp": "2026-07-21T20:57:58.436Z"
+  },
+  {
+    "id": "JA-BTN-0024",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "EXTRAORDINARIO",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/credito-extraordinario/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/credito-extraordinario/",
+    "status": "ok",
+    "latencyMs": 1360,
+    "latenciesMs": [
+      1360
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0024-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0024-after.png",
+    "timestamp": "2026-07-21T20:58:06.670Z"
+  },
+  {
+    "id": "JA-BTN-0025",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "CRÉDITO VERDE",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/credito-verde/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/credito-verde/",
+    "status": "ok",
+    "latencyMs": 1414,
+    "latenciesMs": [
+      1414
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0025-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0025-after.png",
+    "timestamp": "2026-07-21T20:58:13.687Z"
+  },
+  {
+    "id": "JA-BTN-0026",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "PRODUCTIVO",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/tipos-de-credito-productivo/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/tipos-de-credito-productivo/",
+    "status": "ok",
+    "latencyMs": 1505,
+    "latenciesMs": [
+      1505
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0026-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0026-after.png",
+    "timestamp": "2026-07-21T20:58:20.944Z"
+  },
+  {
+    "id": "JA-BTN-0027",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "VIVIENDA",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/credito-de-vivienda/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/credito-de-vivienda/",
+    "status": "ok",
+    "latencyMs": 1455,
+    "latenciesMs": [
+      1455
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0027-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0027-after.png",
+    "timestamp": "2026-07-21T20:58:28.337Z"
+  },
+  {
+    "id": "JA-BTN-0028",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/creditos/",
+    "pageTitle": "Créditos - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Solicitar tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://api.whatsapp.com/send?l=es&phone=593959181350&tknfv=678ADAD5NOPQRSTUV023456789892D0E",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "skipped",
+    "skipReason": "Enlace externo (app stores, redes, etc.)",
+    "latencyMs": 0,
+    "latenciesMs": [],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "timestamp": "2026-07-21T20:58:33.984Z"
+  },
+  {
+    "id": "JA-BTN-0029",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1340,
+    "latenciesMs": [
+      1340
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0029-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0029-after.png",
+    "timestamp": "2026-07-21T20:58:42.000Z"
+  },
+  {
+    "id": "JA-BTN-0030",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1211,
+    "latenciesMs": [
+      1211
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0030-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0030-after.png",
+    "timestamp": "2026-07-21T20:58:47.479Z"
+  },
+  {
+    "id": "JA-BTN-0031",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/jardin-azuayo-virtual/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/jardin-azuayo-virtual/",
+    "status": "ok",
+    "latencyMs": 1695,
+    "latenciesMs": [
+      1695
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0031-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0031-after.png",
+    "timestamp": "2026-07-21T20:58:53.535Z"
+  },
+  {
+    "id": "JA-BTN-0032",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/jardin-azuayo-movil/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/jardin-azuayo-movil/",
+    "status": "ok",
+    "latencyMs": 1858,
+    "latenciesMs": [
+      1858
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0032-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0032-after.png",
+    "timestamp": "2026-07-21T20:58:59.502Z"
+  },
+  {
+    "id": "JA-BTN-0033",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a#slider-96-slide-104-layer-8.rs-layer.customFont",
+    "text": "Solicita tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 2826,
+    "latenciesMs": [
+      2826
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0033-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0033-after.png",
+    "timestamp": "2026-07-21T20:59:06.590Z"
+  },
+  {
+    "id": "JA-BTN-0034",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/jardin-azuayo-pagos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/jardin-azuayo-pagos/",
+    "status": "ok",
+    "latencyMs": 1514,
+    "latenciesMs": [
+      1514
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "listarPuntosPorValores is not defined"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0034-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0034-after.png",
+    "timestamp": "2026-07-21T20:59:12.111Z"
+  },
+  {
+    "id": "JA-BTN-0035",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "status": "ok",
+    "latencyMs": 1525,
+    "latenciesMs": [
+      1525
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Permissions policy violation: compute-pressure is not allowed in this document.",
+      "listarPuntosPorValores is not defined"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0035-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0035-after.png",
+    "timestamp": "2026-07-21T20:59:17.904Z"
+  },
+  {
+    "id": "JA-BTN-0036",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/corresponsales-solidarios/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/corresponsales-solidarios/",
+    "status": "ok",
+    "latencyMs": 1435,
+    "latenciesMs": [
+      1435
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Access to fetch at 'https://servicios.jardinazuayo.fin.ec/ubicaciones-api-ws/datosMapa?tipoId=3&ciudadId=0' from origin 'https://www.jardinazuayo.fin.ec' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "TypeError: Failed to fetch\n    at obtenerDatos (https://www.jardinazuayo.fin.ec/corresponsales-solidarios/:1905:41)\n    at initialize (https://www.jardinazuayo.fin.ec/corresponsales-solidarios/:1917:13)\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:333:152\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:332:146",
+      "Cannot read properties of undefined (reading 'length')"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0036-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0036-after.png",
+    "timestamp": "2026-07-21T20:59:23.465Z"
+  },
+  {
+    "id": "JA-BTN-0037",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/tarjetas-de-debito/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/tarjetas-de-debito/",
+    "status": "ok",
+    "latencyMs": 1396,
+    "latenciesMs": [
+      1396
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0037-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0037-after.png",
+    "timestamp": "2026-07-21T20:59:29.098Z"
+  },
+  {
+    "id": "JA-BTN-0038",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/servicio-en-linea/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/servicio-en-linea/",
+    "status": "ok",
+    "latencyMs": 1370,
+    "latenciesMs": [
+      1370
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0038-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0038-after.png",
+    "timestamp": "2026-07-21T20:59:34.746Z"
+  },
+  {
+    "id": "JA-BTN-0039",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "pageTitle": "Servicios Virtuales - Jardin Azuayo",
+    "selector": "a.vc_general.vc_btn3",
+    "text": "Más información",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/cajeros-autoservicio/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/nuevos-canales/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/cajeros-autoservicio/",
+    "status": "ok",
+    "latencyMs": 1635,
+    "latenciesMs": [
+      1635
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0039-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0039-after.png",
+    "timestamp": "2026-07-21T20:59:40.548Z"
+  },
+  {
+    "id": "JA-BTN-0040",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "pageTitle": "Jardín Azuayo Tiendas - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1367,
+    "latenciesMs": [
+      1367
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0040-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0040-after.png",
+    "timestamp": "2026-07-21T20:59:49.880Z"
+  },
+  {
+    "id": "JA-BTN-0041",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "pageTitle": "Jardín Azuayo Tiendas - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1454,
+    "latenciesMs": [
+      1454
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "Access to fetch at 'https://servicios.jardinazuayo.fin.ec/ubicaciones-api-ws/datosMapa?tipoId=0&ciudadId=0' from origin 'https://www.jardinazuayo.fin.ec' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      "Failed to load resource: net::ERR_FAILED",
+      "TypeError: Failed to fetch\n    at obtenerDatos (https://www.jardinazuayo.fin.ec/encuentranos/:1591:39)\n    at initialize (https://www.jardinazuayo.fin.ec/encuentranos/:1603:7)\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:333:152\n    at https://maps.googleapis.com/maps/api/js?key=AIzaSyCzK2t3WkfgUB-a74uAbhRtm7bJQUXBy3w&callback=initialize:332:146",
+      "Cannot read properties of undefined (reading 'length')"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0041-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0041-after.png",
+    "timestamp": "2026-07-21T20:59:56.672Z"
+  },
+  {
+    "id": "JA-BTN-0042",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "pageTitle": "Jardín Azuayo Tiendas - Jardin Azuayo",
+    "selector": "a#slider-75-slide-83-layer-8.rs-layer.customFont",
+    "text": "Solicita tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/jardin-azuayo-tiendas/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 3198,
+    "latenciesMs": [
+      3198
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0042-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0042-after.png",
+    "timestamp": "2026-07-21T21:00:05.138Z"
+  },
+  {
+    "id": "JA-BTN-0043",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "pageTitle": "Asesoría al migrante - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1404,
+    "latenciesMs": [
+      1404
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0043-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0043-after.png",
+    "timestamp": "2026-07-21T21:00:14.294Z"
+  },
+  {
+    "id": "JA-BTN-0044",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "pageTitle": "Asesoría al migrante - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1207,
+    "latenciesMs": [
+      1207
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0044-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0044-after.png",
+    "timestamp": "2026-07-21T21:00:19.544Z"
+  },
+  {
+    "id": "JA-BTN-0045",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "pageTitle": "Asesoría al migrante - Jardin Azuayo",
+    "selector": "a#slider-96-slide-104-layer-8.rs-layer.customFont",
+    "text": "Solicita tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/asesoria-al-migrante/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 2261,
+    "latenciesMs": [
+      2261
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0045-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0045-after.png",
+    "timestamp": "2026-07-21T21:00:25.899Z"
+  },
+  {
+    "id": "JA-BTN-0046",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "pageTitle": "Recaudaciones y Pagos - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1443,
+    "latenciesMs": [
+      1443
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0046-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0046-after.png",
+    "timestamp": "2026-07-21T21:00:34.656Z"
+  },
+  {
+    "id": "JA-BTN-0047",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "pageTitle": "Recaudaciones y Pagos - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1162,
+    "latenciesMs": [
+      1162
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0047-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0047-after.png",
+    "timestamp": "2026-07-21T21:00:39.724Z"
+  },
+  {
+    "id": "JA-BTN-0048",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "pageTitle": "Recaudaciones y Pagos - Jardin Azuayo",
+    "selector": "a#slider-96-slide-104-layer-8.rs-layer.customFont",
+    "text": "Solicita tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/recaudaciones-y-pagos/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 2614,
+    "latenciesMs": [
+      2614
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0048-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0048-after.png",
+    "timestamp": "2026-07-21T21:00:46.285Z"
+  },
+  {
+    "id": "JA-BTN-0049",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "pageTitle": "Servicios Solidarios - Jardin Azuayo",
+    "selector": "button.thm-btn",
+    "text": "",
+    "tagName": "button",
+    "role": null,
+    "href": null,
+    "urlBefore": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/?s=",
+    "status": "ok",
+    "latencyMs": 1322,
+    "latenciesMs": [
+      1322
+    ],
+    "slow": false,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0049-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0049-after.png",
+    "timestamp": "2026-07-21T21:00:54.070Z"
+  },
+  {
+    "id": "JA-BTN-0050",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "pageTitle": "Servicios Solidarios - Jardin Azuayo",
+    "selector": "a",
+    "text": "Encuéntranos",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/encuentranos/",
+    "status": "ok",
+    "latencyMs": 1230,
+    "latenciesMs": [
+      1230
+    ],
+    "slow": false,
+    "consoleErrors": [
+      "initialize is not a function"
+    ],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0050-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0050-after.png",
+    "timestamp": "2026-07-21T21:00:58.955Z"
+  },
+  {
+    "id": "JA-BTN-0051",
+    "pageUrl": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "pageTitle": "Servicios Solidarios - Jardin Azuayo",
+    "selector": "a#slider-96-slide-104-layer-8.rs-layer.customFont",
+    "text": "Solicita tu crédito",
+    "tagName": "a",
+    "role": null,
+    "href": "https://www.jardinazuayo.fin.ec/creditos",
+    "urlBefore": "https://www.jardinazuayo.fin.ec/servicios-solidarios/",
+    "urlAfter": "https://www.jardinazuayo.fin.ec/creditos/",
+    "status": "ok",
+    "latencyMs": 2343,
+    "latenciesMs": [
+      2343
+    ],
+    "slow": true,
+    "consoleErrors": [],
+    "networkErrors": [],
+    "screenshotBefore": "evidence/screenshots/JA-BTN-0051-before.png",
+    "screenshotAfter": "evidence/screenshots/JA-BTN-0051-after.png",
+    "timestamp": "2026-07-21T21:01:04.933Z"
+  }
+]
