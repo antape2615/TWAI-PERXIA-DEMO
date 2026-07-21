@@ -1,0 +1,125 @@
+[
+  {
+    "id": "TC-ARQ-001-01",
+    "titulo": "Carga inicial SSR dentro del tiempo máximo",
+    "criterio": "CA-RN01-01",
+    "regla": "RN-01",
+    "status": "passed",
+    "duracionMs": 2094,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-01-happy-path.png",
+    "detalles": {
+      "tiempoCargaSegundos": 1.947,
+      "limiteSegundos": 8,
+      "url": "https://www.grupoficohsa.com"
+    }
+  },
+  {
+    "id": "TC-ARQ-001-02",
+    "titulo": "Documento SSR con HTML válido y título",
+    "criterio": "CA-RN01-01",
+    "regla": "RN-01",
+    "status": "passed",
+    "duracionMs": 1988,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-02-happy-path.png",
+    "detalles": {
+      "tituloPagina": "Grupo Ficohsa | Soluciones financieras"
+    }
+  },
+  {
+    "id": "TC-ARQ-001-03",
+    "titulo": "Contenido principal visible sin pantalla en blanco",
+    "criterio": "HU visitante — experiencia fluida",
+    "regla": "RN-01",
+    "status": "passed",
+    "duracionMs": 2135,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-03-happy-path.png",
+    "detalles": {}
+  },
+  {
+    "id": "TC-ARQ-001-04",
+    "titulo": "Sin errores críticos de consola en carga inicial",
+    "criterio": "CA-RN02-01",
+    "regla": "RN-02",
+    "status": "failed",
+    "duracionMs": 4500,
+    "detalles": {
+      "erroresConsola": [
+        "The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.",
+        "Cannot read properties of null (reading 'getAttribute')",
+        "Cannot read properties of undefined (reading 'addEventListener')"
+      ],
+      "totalErroresRaw": 3
+    },
+    "error": "Errores críticos de consola detectados: The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. | Cannot read properties of null (reading 'getAttribute') | Cannot read properties of undefined (reading 'addEventListener')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m3\u001b[39m\nReceived array:  \u001b[31m[\"The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy.\", \"Cannot read properties of null (reading 'getAttribute')\", \"Cannot read properties of undefined (reading 'addEventListener')\"]\u001b[39m"
+  },
+  {
+    "id": "TC-ARQ-001-05",
+    "titulo": "Recursos de integración sin fallos HTTP críticos",
+    "criterio": "CA-RN02-01",
+    "regla": "RN-02",
+    "status": "passed",
+    "duracionMs": 2620,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-05-happy-path.png",
+    "detalles": {
+      "totalRespuestas": 112,
+      "fallosHttp": []
+    }
+  },
+  {
+    "id": "TC-ARQ-001-06",
+    "titulo": "Navegación interna fluida entre secciones",
+    "criterio": "HU visitante — navegación sin interrupciones",
+    "regla": "RN-02",
+    "status": "passed",
+    "duracionMs": 68801,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-06-navegacion.png",
+    "detalles": {
+      "navegaciones": [
+        {
+          "enlace": "https://www.grupoficohsa.com/acerca-de-ficohsa/nuestra-presencia",
+          "status": null,
+          "ok": true
+        },
+        {
+          "enlace": "https://www.grupoficohsa.com",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "enlace": "/acerca-de-ficohsa/nosotros",
+          "status": null,
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "TC-ARQ-001-07",
+    "titulo": "UI controlada sin página de error del servidor",
+    "criterio": "CA-RN02-02",
+    "regla": "RN-02",
+    "status": "passed",
+    "duracionMs": 2476,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-07-happy-path.png",
+    "detalles": {}
+  },
+  {
+    "id": "TC-ARQ-001-08",
+    "titulo": "Métricas de performance inicial registradas",
+    "criterio": "CA-RN01-01 — evidencia de tiempos",
+    "regla": "RN-01",
+    "status": "passed",
+    "duracionMs": 2497,
+    "screenshot": "evidence/screenshots/TC-ARQ-001-08-happy-path.png",
+    "detalles": {
+      "metricas": {
+        "domContentLoadedMs": 701.2999999970198,
+        "loadEventEndMs": 1533.2999999970198,
+        "responseEndMs": 197.20000000298023,
+        "transferSize": 37355
+      },
+      "limiteSegundos": 8,
+      "maxReintentosIntegracion": 3
+    }
+  }
+]

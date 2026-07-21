@@ -48,6 +48,21 @@ npm run test:e2e:report
 | `evidence/playwright-report.json` | Reporte JSON de Playwright |
 | `evidence/html-report/index.html` | Reporte HTML interactivo |
 
-## Última ejecución
+## Última ejecución (2026-07-21)
 
-Ver `evidence/report.pdf` y `evidence/test-results.json` tras correr `npm run test:e2e:report`.
+| Resultado | Valor |
+|-----------|-------|
+| **Global** | **FAIL** (7 passed / 1 failed) |
+| BASE_URL | https://www.grupoficohsa.com |
+| Tiempo carga inicial medido | ~1.9 s (límite 8 s) ✅ |
+| Caso fallido | TC-ARQ-001-04 — errores JS en consola del sitio |
+
+### Fallo documentado (TC-ARQ-001-04)
+
+Errores detectados en consola del sitio en producción:
+
+1. `Cannot read properties of null (reading 'getAttribute')`
+2. `Cannot read properties of undefined (reading 'addEventListener')`
+3. Aviso CSP report-only (informativo)
+
+Evidencia: `evidence/screenshots/TC-ARQ-001-04-failure.png`, `evidence/video/*.webm`, `evidence/report.pdf`

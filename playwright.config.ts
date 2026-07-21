@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 import { HU_ARQ_001, EVIDENCE_DIR } from './e2e/ficosha/config';
 
 export default defineConfig({
+  globalSetup: './e2e/global-setup.ts',
   testDir: './e2e',
   testMatch: '**/*.spec.ts',
   fullyParallel: false,

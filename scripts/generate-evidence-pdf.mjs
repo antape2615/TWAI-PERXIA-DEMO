@@ -16,27 +16,14 @@ const RESULTS_JSON = path.join(EVIDENCE, 'test-results.json');
 const PW_REPORT = path.join(EVIDENCE, 'playwright-report.json');
 const PDF_OUT = path.join(EVIDENCE, 'report.pdf');
 
-interface TestEvidence {
-  id: string;
-  titulo: string;
-  criterio: string;
-  regla: string;
-  status: 'passed' | 'failed' | 'skipped';
-  duracionMs: number;
-  screenshot?: string;
-  video?: string;
-  detalles: Record<string, unknown>;
-  error?: string;
-}
-
-function copyVideosFromTestResults(): string[] {
+function copyVideosFromTestResults() {
   const testResultsDir = path.join(EVIDENCE, 'test-results');
   fs.mkdirSync(VIDEO, { recursive: true });
-  const copied: string[] = [];
+  const copied = [];
 
   if (!fs.existsSync(testResultsDir)) return copied;
 
-  const walk = (dir: string) => {
+  const walk = (dir) => {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) {
@@ -52,41 +39,61 @@ function copyVideosFromTestResults(): string[] {
   return copied;
 }
 
-function loadResults(): TestEvidence[] {
+function loadResults() {
   if (fs.existsSync(RESULTS_JSON)) {
     return JSON.parse(fs.readFileSync(RESULTS_JSON, 'utf-8'));
   }
   return [];
 }
 
-function loadPlaywrightSummary(): { passed: number; failed: number; total: number } {
+function loadPlaywrightSummary() {
   if (!fs.existsSync(PW_REPORT)) return { passed: 0, failed: 0, total: 0 };
   const report = JSON.parse(fs.readFileSync(PW_REPORT, 'utf-8'));
   const suites = report.suites ?? [];
   let passed = 0;
   let failed = 0;
-  const countSpecs = (suite: { specs?: unknown[]; suites?: unknown[] }) => {
+  const countSpecs = (suite) => {
     for (const spec of suite.specs ?? []) {
-      const s = spec as { tests?: { results?: { status: string }[] }[] };
-      for (const t of s.tests ?? []) {
+      for (const t of spec.tests ?? []) {
         const status = t.results?.[0]?.status;
         if (status === 'passed') passed++;
         else if (status === 'failed') failed++;
       }
     }
     for (const child of suite.suites ?? []) {
-      countSpecs(child as { specs?: unknown[]; suites?: unknown[] });
+      countSpecs(child);
     }
   };
   for (const suite of suites) countSpecs(suite);
   return { passed, failed, total: passed + failed };
 }
 
-async function generatePdf(results, videos) {
+function loadPlaywrightSpecs() {
+  if (!fs.existsSync(PW_REPORT)) return [];
+  const report = JSON.parse(fs.readFileSync(PW_REPORT, 'utf-8'));
+  const specs = [];
+  const walk = (suite) => {
+    for (const spec of suite.specs ?? []) {
+      for (const t of spec.tests ?? []) {
+        specs.push({
+          title: spec.title,
+          status: t.results?.[0]?.status ?? 'unknown',
+          duration: t.results?.[0]?.duration ?? 0,
+          error: t.results?.[0]?.error?.message ?? null,
+        });
+      }
+    }
+    for (const child of suite.suites ?? []) walk(child);
+  };
+  for (const suite of report.suites ?? []) walk(suite);
+  return specs;
+}
+
+async function generatePdf(results, videos, pwSpecs) {
   const summary = loadPlaywrightSummary();
-  const passed = results.filter((r) => r.status === 'passed').length;
-  const failed = results.filter((r) => r.status === 'failed').length;
-  const overall = failed === 0 && summary.failed === 0 ? 'PASS' : 'FAIL';
+  const passed = summary.passed || results.filter((r) => r.status === 'passed').length;
+  const failed = summary.failed || results.filter((r) => r.status === 'failed').length;
+  const overall = failed === 0 ? 'PASS' : 'FAIL';
 
   const doc = new PDFDocument({ margin: 50, size: 'A4' });
   const stream = fs.createWriteStream(PDF_OUT);
@@ -96,16 +103,15 @@ async function generatePdf(results, videos) {
   doc.moveDown(0.5);
   doc.fontSize(12).text('Cliente: Ficohsa (Grupo Ficohsa)', { align: 'center' });
   doc.text('BASE_URL: https://www.grupoficohsa.com', { align: 'center' });
-  doc.text(`HU: HU-ARQ-001 — Arquitectura SSR / Microfrontends`, { align: 'center' });
+  doc.text('HU: HU-ARQ-001 — Arquitectura SSR / Microfrontends', { align: 'center' });
   doc.text(`Fecha ejecución: ${new Date().toISOString()}`, { align: 'center' });
   doc.moveDown();
 
   doc.fontSize(14).text('Resumen de resultados', { underline: true });
   doc.fontSize(11);
   doc.text(`Resultado global: ${overall}`);
-  doc.text(`Casos ejecutados: ${results.length}`);
+  doc.text(`Casos ejecutados: ${summary.total || results.length}`);
   doc.text(`Passed: ${passed} | Failed: ${failed}`);
-  doc.text(`Playwright report — passed: ${summary.passed}, failed: ${summary.failed}`);
   doc.moveDown();
 
   doc.fontSize(14).text('Parámetros de negocio', { underline: true });
@@ -126,26 +132,45 @@ async function generatePdf(results, videos) {
   doc.fontSize(14).text('Detalle por caso de prueba', { underline: true });
   doc.moveDown(0.5);
 
-  for (const r of results) {
+  const resultMap = new Map(results.map((r) => [r.id, r]));
+  const testIds = [
+    'TC-ARQ-001-01', 'TC-ARQ-001-02', 'TC-ARQ-001-03', 'TC-ARQ-001-04',
+    'TC-ARQ-001-05', 'TC-ARQ-001-06', 'TC-ARQ-001-07', 'TC-ARQ-001-08',
+  ];
+
+  for (const testId of testIds) {
+    const r = resultMap.get(testId);
+    const pw = pwSpecs.find((s) => s.title.includes(testId.split('-').slice(-1)[0]) || s.title.includes(testId));
+    const status = r?.status ?? (pw?.status === 'passed' ? 'passed' : pw?.status === 'failed' ? 'failed' : 'unknown');
+
     if (doc.y > 650) doc.addPage();
 
-    doc.fontSize(12).fillColor(r.status === 'passed' ? 'green' : 'red')
-      .text(`${r.id} — ${r.status.toUpperCase()}`);
+    doc.fontSize(12).fillColor(status === 'passed' ? 'green' : 'red')
+      .text(`${testId} — ${String(status).toUpperCase()}`);
     doc.fillColor('black').fontSize(10);
-    doc.text(`Título: ${r.titulo}`);
-    doc.text(`Criterio: ${r.criterio} | Regla: ${r.regla}`);
-    doc.text(`Duración: ${r.duracionMs} ms`);
-    if (r.error) doc.text(`Error: ${r.error}`);
-    if (Object.keys(r.detalles).length > 0) {
-      doc.text(`Detalles: ${JSON.stringify(r.detalles, null, 0).slice(0, 500)}`);
+
+    if (r) {
+      doc.text(`Título: ${r.titulo}`);
+      doc.text(`Criterio: ${r.criterio} | Regla: ${r.regla}`);
+      doc.text(`Duración: ${r.duracionMs} ms`);
+      if (r.error) doc.text(`Error: ${r.error}`);
+      if (Object.keys(r.detalles).length > 0) {
+        doc.text(`Detalles: ${JSON.stringify(r.detalles).slice(0, 600)}`);
+      }
+    } else if (pw) {
+      doc.text(`Título: ${pw.title}`);
+      doc.text(`Duración: ${pw.duration} ms`);
+      if (pw.error) doc.text(`Error: ${pw.error.slice(0, 400)}`);
     }
 
-    const shotPath = r.screenshot && fs.existsSync(r.screenshot)
-      ? r.screenshot
-      : fs.existsSync(path.join(SCREENSHOTS, `${r.id}-happy-path.png`))
-        ? path.join(SCREENSHOTS, `${r.id}-happy-path.png`)
-        : null;
+    const shotCandidates = [
+      r?.screenshot,
+      path.join(SCREENSHOTS, `${testId}-happy-path.png`),
+      path.join(SCREENSHOTS, `${testId}-navegacion.png`),
+      path.join(SCREENSHOTS, `${testId}-failure.png`),
+    ].filter(Boolean);
 
+    const shotPath = shotCandidates.find((p) => fs.existsSync(p));
     if (shotPath) {
       try {
         doc.moveDown(0.3);
@@ -162,9 +187,9 @@ async function generatePdf(results, videos) {
   doc.fontSize(12).text('Reproducción', { underline: true });
   doc.fontSize(10);
   doc.text('npx playwright test e2e/ficosha/hu-arq-001.spec.ts');
-  doc.text('npm run test:e2e:report  # genera PDF tras ejecución');
+  doc.text('npm run test:e2e:report');
   doc.text('');
-  doc.text('Nota: CA-RN03-01 (documentación técnica versionada con diagramas) requiere validación manual/documental fuera del alcance E2E.');
+  doc.text('Nota: CA-RN03-01 (documentación técnica versionada) requiere validación manual fuera del alcance E2E.');
 
   doc.end();
 
@@ -174,14 +199,15 @@ async function generatePdf(results, videos) {
   });
 }
 
-async function main(): Promise<void> {
+async function main() {
   fs.mkdirSync(EVIDENCE, { recursive: true });
   fs.mkdirSync(SCREENSHOTS, { recursive: true });
 
   const videos = copyVideosFromTestResults();
   const results = loadResults();
+  const pwSpecs = loadPlaywrightSpecs();
 
-  await generatePdf(results, videos);
+  await generatePdf(results, videos, pwSpecs);
   console.log(`PDF generado: ${PDF_OUT}`);
   console.log(`Videos copiados: ${videos.length}`);
   console.log(`Casos en reporte: ${results.length}`);

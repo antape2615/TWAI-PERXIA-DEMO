@@ -57,10 +57,30 @@ export async function captureScreenshot(
   return filepath;
 }
 
-export function recordEvidence(entry: TestEvidence): void {
-  evidenceResults.push(entry);
+export function resetEvidenceResults(): void {
   ensureEvidenceDirs();
-  fs.writeFileSync(RESULTS_JSON, JSON.stringify(evidenceResults, null, 2), 'utf-8');
+  if (fs.existsSync(RESULTS_JSON)) {
+    fs.unlinkSync(RESULTS_JSON);
+  }
+}
+
+export function recordEvidence(entry: TestEvidence): void {
+  ensureEvidenceDirs();
+  let existing: TestEvidence[] = [];
+  if (fs.existsSync(RESULTS_JSON)) {
+    try {
+      existing = JSON.parse(fs.readFileSync(RESULTS_JSON, 'utf-8'));
+    } catch {
+      existing = [];
+    }
+  }
+  const idx = existing.findIndex((e) => e.id === entry.id);
+  if (idx >= 0) {
+    existing[idx] = entry;
+  } else {
+    existing.push(entry);
+  }
+  fs.writeFileSync(RESULTS_JSON, JSON.stringify(existing, null, 2), 'utf-8');
 }
 
 export function getConsoleErrors(page: Page): string[] {
@@ -103,19 +123,29 @@ export function collectFailedResponses(responses: Response[]): Response[] {
 export async function waitForMainContent(page: Page): Promise<void> {
   await page.waitForLoadState('domcontentloaded');
   await page.locator('body').waitFor({ state: 'visible', timeout: 15000 });
-  const mainSelectors = [
-    'header',
-    'nav',
-    'main',
-    '[role="main"]',
-    '.header',
-    '#header',
+
+  const ficohsaSelectors = [
+    '[role="banner"]',
+    'img[alt*="Ficohsa" i]',
+    'a[href*="grupoficohsa.com"]',
+    'text=TE DAMOS LA BIENVENIDA',
+    'button:has-text("Acerca de Ficohsa")',
+    'text=Acerca de Ficohsa',
+    'h1:visible',
+    'h2:visible',
+    'h3:visible',
+    'p:visible',
   ];
-  for (const sel of mainSelectors) {
+
+  for (const sel of ficohsaSelectors) {
     const el = page.locator(sel).first();
-    if (await el.isVisible({ timeout: 3000 }).catch(() => false)) {
+    if (await el.isVisible({ timeout: 5000 }).catch(() => false)) {
       return;
     }
   }
-  await page.locator('body *').first().waitFor({ state: 'visible', timeout: 5000 });
+
+  await page.waitForFunction(
+    () => (document.body?.innerText?.trim().length ?? 0) > 50,
+    { timeout: 10_000 },
+  );
 }

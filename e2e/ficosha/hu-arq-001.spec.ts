@@ -19,16 +19,13 @@ import {
 } from './helpers';
 
 test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () => {
-  test.beforeAll(() => {
-    ensureEvidenceDirs();
-  });
 
   test('TC-ARQ-001-01: Carga inicial SSR dentro del tiempo máximo (CA-RN01-01 / RN-01)', async ({
     page,
   }) => {
     const testId = 'TC-ARQ-001-01';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let loadTimeSec = 0;
     let screenshot: string | undefined;
@@ -75,7 +72,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-02';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
 
@@ -117,7 +114,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-03';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
 
@@ -157,7 +154,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-04';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
     const consoleErrors = getConsoleErrors(page);
@@ -204,7 +201,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-05';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
     const responses: import('@playwright/test').Response[] = [];
@@ -255,7 +252,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-06';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
     const navResults: { enlace: string; status: number | null; ok: boolean }[] = [];
@@ -266,7 +263,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
       await dismissOverlays(page);
 
       const navLinks = page.locator(
-        'header a[href], nav a[href], [role="navigation"] a[href]',
+        '[role="banner"] a[href], a[href^="/"]:not([href^="#"]), a[href*="grupoficohsa.com"]',
       );
       const count = await navLinks.count();
       expect(count).toBeGreaterThan(0);
@@ -317,7 +314,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-07';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
 
@@ -368,7 +365,7 @@ test.describe('HU-ARQ-001 — Arquitectura SSR / Microfrontends @ficosha', () =>
   }) => {
     const testId = 'TC-ARQ-001-08';
     const start = Date.now();
-    let status = 'passed' as const;
+    let status: 'passed' | 'failed' = 'passed';
     let errorMsg: string | undefined;
     let screenshot: string | undefined;
     let metrics: Record<string, number> = {};
