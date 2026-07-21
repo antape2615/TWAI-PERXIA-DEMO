@@ -35,8 +35,8 @@ export default function Catalog() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <h1>Catálogo de cocina</h1>
-        <p>Encuentra sartenes, ollas, electrodomésticos y más para tu cocina.</p>
+        <h1>Kitchen Catalog</h1>
+        <p>Find pans, pots, appliances and more for your kitchen.</p>
       </header>
 
       <section className={styles.filters} aria-label="Filtros del catálogo">
