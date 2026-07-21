@@ -5,7 +5,7 @@ import { usePriceFilter } from '../hooks/usePriceFilter';
 import { formatCOP } from '../utils/currency';
 import styles from './Catalog.module.css';
 
-const PRICE_STEP = 10000;
+const PRICE_STEP = 1;
 
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState('');
