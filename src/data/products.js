@@ -3,7 +3,7 @@ export const products = [
   {
     id: '1',
     name: 'Nonstick Frying Pan Set',
-    price: 359000,
+    price: 89.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hahn_29cm_Frying_Pan.jpg/500px-Hahn_29cm_Frying_Pan.jpg',
     category: 'Sartenes',
@@ -13,7 +13,7 @@ export const products = [
   {
     id: '2',
     name: 'Professional Stand Mixer',
-    price: 519000,
+    price: 129.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/White_KitchenAid_mixer_%28KSM150PSWH%29.jpg/500px-White_KitchenAid_mixer_%28KSM150PSWH%29.jpg',
     category: 'Electrodomésticos',
@@ -23,7 +23,7 @@ export const products = [
   {
     id: '3',
     name: 'Japanese Kitchen Knives',
-    price: 639000,
+    price: 159.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chef%27s_knife.jpg/500px-Chef%27s_knife.jpg',
     category: 'Cuchillos',
@@ -33,7 +33,7 @@ export const products = [
   {
     id: '4',
     name: 'Electric Pressure Cooker',
-    price: 319000,
+    price: 79.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pressure_cooker.jpg/500px-Pressure_cooker.jpg',
     category: 'Ollas',
@@ -43,7 +43,7 @@ export const products = [
   {
     id: '5',
     name: 'Bamboo Cutting Board',
-    price: 139000,
+    price: 34.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cutting_board.jpg/500px-Cutting_board.jpg',
     category: 'Utensilios',
@@ -53,7 +53,7 @@ export const products = [
   {
     id: '6',
     name: 'Manual Espresso Maker',
-    price: 279000,
+    price: 69.99,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Moka_pot.jpg/500px-Moka_pot.jpg',
     category: 'Café',
     description: 'Moka italiana 6 tazas, aluminio, estufa e inducción.',
@@ -62,7 +62,7 @@ export const products = [
   {
     id: '7',
     name: 'Cookware Set',
-    price: 799000,
+    price: 199.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/All-Clad_Copper_Core_pots.jpeg/500px-All-Clad_Copper_Core_pots.jpeg',
     category: 'Ollas',
@@ -72,7 +72,7 @@ export const products = [
   {
     id: '8',
     name: 'Multifunction Food Processor',
-    price: 1399000,
+    price: 349.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Cuisinart_food_processor.jpg/500px-Cuisinart_food_processor.jpg',
     category: 'Electrodomésticos',
@@ -82,7 +82,7 @@ export const products = [
   {
     id: '9',
     name: 'Marble Mortar',
-    price: 179000,
+    price: 44.99,
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mortar_and_pestle.jpg/500px-Mortar_and_pestle.jpg',
     category: 'Utensilios',
@@ -92,7 +92,7 @@ export const products = [
   {
     id: '10',
     name: '2-Slice Toaster',
-    price: 199000,
+    price: 49.99,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Toaster.jpg/500px-Toaster.jpg',
     category: 'Electrodomésticos',
     description: '6 niveles de tostado, bandeja extraíble, función descongelar.',

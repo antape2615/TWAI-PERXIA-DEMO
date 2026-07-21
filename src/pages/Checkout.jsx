@@ -19,7 +19,7 @@ export default function Checkout() {
   }).filter(Boolean);
 
   const subtotal = lines.reduce((acc, l) => acc + l.product.price * l.quantity, 0);
-  const shipping = subtotal > 0 ? 40000 : 0;
+  const shipping = subtotal > 0 ? 9.99 : 0;
   const total = subtotal + shipping;
 
   const selectedAddress = user?.addresses?.find((a) => a.id === selectedAddressId);
