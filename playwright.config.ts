@@ -16,7 +16,7 @@ export default defineConfig({
     ['html', { outputFile: `${EVIDENCE_DIR}/html-report/index.html`, open: 'never' }],
   ],
   use: {
-    baseURL: HU_ARQ_001.baseUrl,
+    baseURL: process.env.BASE_URL ?? HU_ARQ_001.baseUrl,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -30,7 +30,18 @@ export default defineConfig({
   projects: [
     {
       name: 'ficosha-chromium',
+      testIgnore: '**/button-audit.spec.ts',
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'ficosha-button-audit',
+      testMatch: '**/button-audit.spec.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        video: 'on',
+        screenshot: 'on',
+        trace: 'on',
+      },
     },
   ],
 });

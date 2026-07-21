@@ -66,3 +66,53 @@ Errores detectados en consola del sitio en producción:
 3. Aviso CSP report-only (informativo)
 
 Evidencia: `evidence/screenshots/TC-ARQ-001-04-failure.png`, `evidence/video/*.webm`, `evidence/report.pdf`
+
+---
+
+## Auditoría de botones UI (latencia / performance)
+
+Suite independiente que inventaría **todos los controles accionables** visibles en la home y páginas clave del nav, mide **tiempo de respuesta** (click → red idle / UI estable) y genera evidencia para gobernanza.
+
+### Alcance
+
+| Selector / control | Incluido |
+|--------------------|----------|
+| `button`, `input[type=submit/button]` | ✅ |
+| `[role=button]`, `a[role=button]` | ✅ |
+| CTAs (`a.btn`, `a.button`, `a[class*=cta]`) | ✅ |
+| Logout, pagos, borrados, envíos irreversibles | ⏭ skipped con motivo |
+
+### Ejecución
+
+```bash
+npm install
+npx playwright install chromium
+
+# Auditoría completa contra producción
+npx playwright test e2e/ficosha/button-audit.spec.ts
+
+# Auditoría + PDF de evidencia
+npm run test:button-audit:report
+```
+
+### Variables de entorno
+
+| Variable | Default | Descripción |
+|----------|---------|-------------|
+| `BASE_URL` | `https://www.grupoficohsa.com` | Sitio bajo prueba |
+| `SLOW_THRESHOLD_MS` | `2000` | Umbral botón lento |
+| `BUTTON_AUDIT_MAX_PAGES` | `8` | Páginas clave desde nav |
+| `BUTTON_AUDIT_MAX_BUTTONS` | `40` | Botones máx. por página |
+| `BUTTON_AUDIT_REPEAT` | `1` | Repeticiones (p50/p95) |
+
+### Evidencia generada
+
+| Ruta | Contenido |
+|------|-----------|
+| `evidence/timings.json` | Datos crudos: latencias, status, errores consola/red |
+| `evidence/button-audit.csv` | Tabla exportable |
+| `evidence/button-audit.md` | Reporte Markdown con p50/p95 y botones lentos/rotos |
+| `evidence/screenshots/BTN-*-before.png` | Captura antes del click |
+| `evidence/screenshots/BTN-*-after.png` | Captura después del click |
+| `evidence/video/*.webm` | Video de la pasada completa |
+| `evidence/report.pdf` | PDF con tabla + capturas |

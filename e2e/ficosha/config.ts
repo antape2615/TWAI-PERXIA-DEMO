@@ -18,3 +18,21 @@ export const EVIDENCE_DIR = 'evidence';
 export const SCREENSHOTS_DIR = `${EVIDENCE_DIR}/screenshots`;
 export const VIDEO_DIR = `${EVIDENCE_DIR}/video`;
 export const RESULTS_JSON = `${EVIDENCE_DIR}/test-results.json`;
+export const TIMINGS_JSON = `${EVIDENCE_DIR}/timings.json`;
+
+/** Parámetros auditoría de botones UI / performance */
+export const BUTTON_AUDIT = {
+  baseUrl: process.env.BASE_URL ?? 'https://www.grupoficohsa.com',
+  /** Latencia > este valor marca el botón como lento */
+  slowThresholdMs: Number(process.env.SLOW_THRESHOLD_MS ?? 2000),
+  /** Páginas clave máximas a auditar (home + nav) */
+  maxPages: Number(process.env.BUTTON_AUDIT_MAX_PAGES ?? 8),
+  /** Botones máximos por página (cobertura vs tiempo) */
+  maxButtonsPerPage: Number(process.env.BUTTON_AUDIT_MAX_BUTTONS ?? 40),
+  /** Repeticiones por botón para p50/p95 */
+  repeatCount: Number(process.env.BUTTON_AUDIT_REPEAT ?? 1),
+  clickTimeoutMs: 15_000,
+  settleTimeoutMs: 10_000,
+  minSettleMs: 500,
+  postClickWaitMs: 300,
+} as const;
