@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 import { HU_ARQ_001, EVIDENCE_DIR } from './e2e/ficosha/config';
+import { JARDIN_AZUAYO } from './e2e/jardin-azuayo/config';
 
 export default defineConfig({
   globalSetup: './e2e/global-setup.ts',
@@ -16,7 +17,6 @@ export default defineConfig({
     ['html', { outputFile: `${EVIDENCE_DIR}/html-report/index.html`, open: 'never' }],
   ],
   use: {
-    baseURL: HU_ARQ_001.baseUrl,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -24,13 +24,30 @@ export default defineConfig({
     navigationTimeout: 60_000,
     viewport: { width: 1440, height: 900 },
     ignoreHTTPSErrors: true,
-    locale: 'es-GT',
+    locale: 'es-EC',
   },
   outputDir: `${EVIDENCE_DIR}/test-results`,
   projects: [
     {
       name: 'ficosha-chromium',
-      use: { ...devices['Desktop Chrome'] },
+      testMatch: '**/ficosha/**/*.spec.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: HU_ARQ_001.baseUrl,
+        locale: 'es-GT',
+      },
+    },
+    {
+      name: 'jardin-azuayo-chromium',
+      testMatch: '**/jardin-azuayo/**/*.spec.ts',
+      timeout: 20 * 60_000,
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: JARDIN_AZUAYO.baseUrl,
+        locale: 'es-EC',
+        video: 'on',
+        screenshot: 'on',
+      },
     },
   ],
 });
