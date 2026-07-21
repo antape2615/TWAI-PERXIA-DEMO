@@ -18,12 +18,6 @@ import {
 } from './button-audit-helpers';
 
 test.describe('Auditoría de botones — Ficohsa @ficosha @button-audit', () => {
-  test.use({
-    video: 'on',
-    screenshot: 'off',
-    trace: 'off',
-  });
-
   test.setTimeout(20 * 60 * 1000);
 
   test('BTN-AUDIT-001: Inventario y medición de latencia en botones visibles', async ({ page }) => {
