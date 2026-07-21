@@ -1,0 +1,53 @@
+/* Estilos compartidos de botones — RN-01 Tema rojo */
+
+.primary {
+  background: var(--color-boton-rojo);
+  color: #ffffff;
+  border: 1px solid var(--color-boton-rojo);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed, 200ms) ease,
+    border-color var(--transition-speed, 200ms) ease,
+    filter var(--transition-speed, 200ms) ease;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--color-boton-rojo-hover);
+  border-color: var(--color-boton-rojo-hover);
+}
+
+.primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.primary:disabled {
+  background: var(--color-boton-deshabilitado);
+  border-color: var(--color-boton-deshabilitado);
+  color: #6b7280;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid var(--color-boton-rojo);
+  color: var(--color-boton-rojo);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed, 200ms) ease,
+    color var(--transition-speed, 200ms) ease,
+    border-color var(--transition-speed, 200ms) ease;
+}
+
+.outline:hover:not(:disabled) {
+  background: var(--color-boton-rojo);
+  color: #ffffff;
+}
+
+.outline:disabled {
+  border-color: var(--color-boton-deshabilitado);
+  color: #9ca3af;
+  cursor: not-allowed;
+}

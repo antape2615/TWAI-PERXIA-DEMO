@@ -1,0 +1,81 @@
+/*
+ * Matriz de Parámetros — Tema rojo CocinaStore (HU Personalización Visual)
+ * Fuente: Config CSS | Dueño: Equipo UX/UI
+ */
+
+:export {
+  colorBotonRojo: #b22222;
+  colorIconoRojo: #b22222;
+  colorFondoHeaderRojo: #8b0000;
+  colorTextoHeaderRojo: #ffffff;
+  colorBotonRojoHover: #8b0000;
+  colorBotonDeshabilitado: #d1d5db;
+  colorBotonRojoDark: #ff6347;
+  colorIconoRojoDark: #ff6347;
+  colorFondoHeaderRojoDark: #5c0000;
+  colorFocusRing: rgba(178, 34, 34, 0.35);
+  colorFocusRingSubtle: rgba(178, 34, 34, 0.15);
+}
+
+:global(:root) {
+  --color-boton-rojo: #b22222;
+  --color-icono-rojo: #b22222;
+  --color-fondo-header-rojo: #8b0000;
+  --color-texto-header-rojo: #ffffff;
+  --color-boton-rojo-hover: #8b0000;
+  --color-boton-deshabilitado: #d1d5db;
+  --color-focus-ring-subtle: rgba(178, 34, 34, 0.15);
+
+  --primary: var(--color-boton-rojo);
+  --primary-dark: var(--color-boton-rojo-hover);
+  --header-bg: var(--color-fondo-header-rojo);
+  --focus-ring: rgba(178, 34, 34, 0.35);
+}
+
+:global(:root[data-theme='light']),
+:global(:root:not([data-theme])) {
+  --color-boton-rojo: #b22222;
+  --color-icono-rojo: #b22222;
+  --color-fondo-header-rojo: #8b0000;
+  --color-texto-header-rojo: #ffffff;
+  --color-boton-rojo-hover: #8b0000;
+  --color-boton-deshabilitado: #d1d5db;
+  --color-focus-ring-subtle: rgba(178, 34, 34, 0.15);
+
+  --primary: var(--color-boton-rojo);
+  --primary-dark: var(--color-boton-rojo-hover);
+  --header-bg: var(--color-fondo-header-rojo);
+  --focus-ring: rgba(178, 34, 34, 0.35);
+}
+
+:global(:root[data-theme='dark']) {
+  --color-boton-rojo: #ff6347;
+  --color-icono-rojo: #ff6347;
+  --color-fondo-header-rojo: #5c0000;
+  --color-texto-header-rojo: #ffffff;
+  --color-boton-rojo-hover: #b22222;
+  --color-boton-deshabilitado: #6b7280;
+  --color-focus-ring-subtle: rgba(255, 99, 71, 0.2);
+
+  --primary: var(--color-boton-rojo);
+  --primary-dark: var(--color-boton-rojo-hover);
+  --header-bg: var(--color-fondo-header-rojo);
+  --focus-ring: rgba(255, 99, 71, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme])) {
+    --color-boton-rojo: #ff6347;
+    --color-icono-rojo: #ff6347;
+    --color-fondo-header-rojo: #5c0000;
+    --color-texto-header-rojo: #ffffff;
+    --color-boton-rojo-hover: #b22222;
+    --color-boton-deshabilitado: #6b7280;
+    --color-focus-ring-subtle: rgba(255, 99, 71, 0.2);
+
+    --primary: var(--color-boton-rojo);
+    --primary-dark: var(--color-boton-rojo-hover);
+    --header-bg: var(--color-fondo-header-rojo);
+    --focus-ring: rgba(255, 99, 71, 0.45);
+  }
+}

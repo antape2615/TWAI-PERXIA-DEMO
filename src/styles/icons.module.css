@@ -1,0 +1,19 @@
+/* Estilos de iconos — RN-02 Tema rojo */
+
+.icon {
+  color: var(--color-icono-rojo);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.iconOnHeader {
+  color: var(--color-texto-header-rojo);
+}
+
+.iconSvg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: currentColor;
+}

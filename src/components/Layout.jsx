@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../hooks/useTheme';
+import { auditRedThemeDom } from '../utils/applyRedTheme';
+import iconStyles from '../styles/icons.module.css';
 import styles from './Layout.module.css';
 
 export default function Layout({ children }) {
@@ -17,6 +20,10 @@ export default function Layout({ children }) {
 
   const isDark = theme === 'dark';
   const nextThemeLabel = isDark ? 'claro' : 'oscuro';
+
+  useEffect(() => {
+    auditRedThemeDom();
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -54,7 +61,11 @@ export default function Layout({ children }) {
             aria-pressed={isDark}
             title={`Cambiar a tema ${nextThemeLabel}`}
           >
-            <span aria-hidden="true" className={styles.themeIcon}>
+            <span
+              aria-hidden="true"
+              className={`${styles.themeIcon} ${iconStyles.iconOnHeader}`}
+              data-red-icon="true"
+            >
               {isDark ? '☀️' : '🌙'}
             </span>
           </button>

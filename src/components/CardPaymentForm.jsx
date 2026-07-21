@@ -68,7 +68,7 @@ export default function CardPaymentForm({ total, onSuccess }) {
   if (done) {
     return (
       <div className={styles.success}>
-        <div className={styles.successIcon}>✓</div>
+        <div className={styles.successIcon} data-red-icon="true">✓</div>
         <h3>Pago procesado (simulado)</h3>
         <p>Este es un entorno de demostración. No se ha cobrado nada.</p>
       </div>
