@@ -18,7 +18,7 @@ export default function Cart() {
   if (lines.length === 0) {
     return (
       <div className={styles.empty}>
-        <h2>Tu carrito está vacío</h2>
+        <h2>Tu carrito</h2>
         <p>Añade productos desde el catálogo.</p>
         <Link to="/" className={styles.cta}>
           Ver catálogo
