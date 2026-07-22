@@ -234,10 +234,103 @@
   font-size: 0.9rem;
 }
 
+.columnControl {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.columnLabel {
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: var(--text);
+}
+
+.columnInput {
+  width: 80px;
+  padding: 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.columnInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.columnInputError {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.resetButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--text-muted);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: filter var(--transition-speed) ease;
+}
+
+.resetButton:hover {
+  filter: brightness(1.1);
+}
+
+.resetButton:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.deviceIndicator {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+.grid.columns1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid.columns2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.columns3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.columns4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid.columns5 {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .list {
@@ -270,6 +363,60 @@
   }
 }
 
+@media (max-width: 479px) {
+  .grid,
+  .grid.columns2,
+  .grid.columns3,
+  .grid.columns4,
+  .grid.columns5 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .columnControl {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .deviceIndicator {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .grid.columns3,
+  .grid.columns4,
+  .grid.columns5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .columnInput {
+    width: 70px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid.columns4,
+  .grid.columns5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .grid.columns5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 640px) {
   .viewToggle {
     align-items: flex-start;
@@ -282,10 +429,6 @@
   .viewButton {
     flex: 1;
     justify-content: center;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 
   .filters {

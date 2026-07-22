@@ -6,6 +6,7 @@
   transition: box-shadow 0.2s, transform 0.2s;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -19,6 +20,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .imageWrap {
@@ -49,33 +51,60 @@
 }
 
 .name {
-  margin: 1rem 1rem 0;
-  font-size: 1.1rem;
+  margin: clamp(0.75rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1rem) 0;
+  font-size: clamp(0.875rem, 2.5vw, 1.1rem);
   font-weight: 600;
   line-height: 1.3;
   color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .price {
-  margin: 0.5rem 1rem 0;
-  font-size: 1.25rem;
+  margin: 0.5rem clamp(0.75rem, 2vw, 1rem) 0;
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 700;
   color: var(--primary);
 }
 
 .addBtn {
-  margin: 1rem;
-  padding: 0.65rem 1rem;
+  margin: clamp(0.75rem, 2vw, 1rem);
+  margin-top: auto;
+  padding: clamp(0.5rem, 1.5vw, 0.65rem) 1rem;
   background: var(--primary);
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
   cursor: pointer;
   transition: filter 0.2s;
 }
 
 .addBtn:hover {
   filter: brightness(1.1);
+}
+
+.addBtn:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (max-width: 479px) {
+  .card {
+    border-radius: 6px;
+  }
+
+  .name {
+    -webkit-line-clamp: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
 }

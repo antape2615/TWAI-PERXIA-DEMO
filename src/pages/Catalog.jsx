@@ -3,6 +3,8 @@ import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import ProductListItem from '../components/ProductListItem';
 import { usePriceFilter } from '../hooks/usePriceFilter';
+import { useBreakpoint } from '../hooks/useBreakpoint';
+import { useColumnPreference } from '../hooks/useColumnPreference';
 import { formatCOP } from '../utils/currency';
 import { trackCatalogFilterEvent } from '../utils/catalogFilterTelemetry';
 import { trackCatalogViewEvent } from '../utils/catalogViewTelemetry';
@@ -13,6 +15,10 @@ import {
   readCatalogViewMode,
 } from '../utils/catalogViewMode';
 import {
+  COLUMN_CONSTRAINTS,
+  getMaxColumnsByDevice,
+} from '../utils/columnValidator';
+import {
   NO_RESULTS_MESSAGE,
   PRICE_SLIDER_STEP,
 } from '../config/catalogFilters';
@@ -21,6 +27,19 @@ import styles from './Catalog.module.css';
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewFeedback, setViewFeedback] = useState('');
+  const breakpoint = useBreakpoint();
+  const {
+    inputValue,
+    setColumnInput,
+    error: columnError,
+    isValid: isColumnInputValid,
+    resetToDefault,
+    effectiveColumns,
+  } = useColumnPreference({
+    defaultColumns: COLUMN_CONSTRAINTS.DEFAULT,
+    breakpoint,
+  });
+  const maxColumnsForDevice = getMaxColumnsByDevice(breakpoint);
   const [viewMode, setViewMode] = useState(() => {
     const preference = readCatalogViewMode();
     trackCatalogViewEvent('PreferenciaModoLeida', {
@@ -79,6 +98,10 @@ export default function Catalog() {
       value: requestedMode,
       status: 'ok',
     });
+  };
+
+  const handleColumnChange = (e) => {
+    setColumnInput(e.target.value);
   };
 
   const hasAnyFilter = isFiltering || Boolean(searchTerm.trim());
@@ -204,13 +227,67 @@ export default function Catalog() {
             {viewFeedback}
           </p>
         )}
+
+        {viewMode === 'grid' && (
+          <div
+            className={styles.columnControl}
+            role="region"
+            aria-label="Configuración de columnas"
+          >
+            <label htmlFor="catalog-columns" className={styles.columnLabel}>
+              Columnas:
+            </label>
+            <input
+              id="catalog-columns"
+              type="number"
+              min={COLUMN_CONSTRAINTS.MIN}
+              max={COLUMN_CONSTRAINTS.MAX}
+              value={inputValue}
+              onChange={handleColumnChange}
+              className={`${styles.columnInput} ${!isColumnInputValid ? styles.columnInputError : ''}`}
+              aria-label="Número de columnas (1-5)"
+              aria-invalid={!isColumnInputValid}
+              aria-describedby={!isColumnInputValid ? 'columnError' : undefined}
+            />
+            {columnError && (
+              <span
+                id="columnError"
+                className={styles.errorMessage}
+                role="alert"
+                aria-live="polite"
+              >
+                {columnError}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={resetToDefault}
+              className={styles.resetButton}
+              aria-label="Restablecer columnas a valor por defecto"
+            >
+              Restablecer
+            </button>
+            <span className={styles.deviceIndicator} aria-live="polite">
+              Dispositivo: {breakpoint.toUpperCase()} (máx {maxColumnsForDevice} col)
+            </span>
+          </div>
+        )}
       </section>
 
       {filteredProducts.length > 0 ? (
         <section
-          className={viewMode === 'grid' ? styles.grid : styles.list}
+          className={
+            viewMode === 'grid'
+              ? `${styles.grid} ${styles[`columns${effectiveColumns}`]}`
+              : styles.list
+          }
           data-view-mode={viewMode}
-          aria-label="Listado de productos"
+          data-columns={viewMode === 'grid' ? effectiveColumns : undefined}
+          aria-label={
+            viewMode === 'grid'
+              ? `Listado de productos con ${effectiveColumns} columna(s)`
+              : 'Listado de productos'
+          }
         >
           {filteredProducts.map((product) =>
             viewMode === 'grid' ? (

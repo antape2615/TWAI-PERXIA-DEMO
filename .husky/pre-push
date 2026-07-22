@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Ejecutar evaluación de código con perxia-eval
+# Usar npx para compatibilidad con Windows
+npx perxia-eval run
