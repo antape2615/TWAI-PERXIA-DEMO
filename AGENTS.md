@@ -2,10 +2,10 @@
 
 ## Cursor Cloud specific instructions
 
-CocinaStore is a single-product **Vite + React 19 SPA** (Spanish kitchen e-commerce demo) with one
-**Netlify Function** (`netlify/functions/auth/auth.js`) backed by **MongoDB Atlas**. There is no
-monorepo, no Docker, and no automated test suite (QA is manual / external Selenium using the
-`casos_prueba_*` files).
+CocinaStore is a single-product **Vite + React 19 SPA** (Spanish kitchen e-commerce demo) with
+**Netlify Functions** (`netlify/functions/auth/auth.js`, `netlify/functions/cobranzas/cobranzas.js`)
+backed by **MongoDB Atlas**. Unit tests: `npm test` (Vitest). Manual QA also uses `casos_prueba_*`
+files / Selenium.
 
 ### Running the app
 
@@ -17,6 +17,9 @@ monorepo, no Docker, and no automated test suite (QA is manual / external Seleni
   environment setup; its bin dir (`$HOME/.npm-global/bin`) is added to `PATH` via `~/.bashrc`. If
   `netlify` is not found, run `npm install -g netlify-cli` (the npm prefix is set to `$HOME/.npm-global`
   so this does not need root). Netlify auto-detects Vite — no extra config needed.
+- **Cobranzas (admin):** route `/admin/cobranzas`, API `/api/cobranzas/*`. Login admin:
+  **admin@cocina.com** / **admin123** (`node scripts/ensure-admin-user.js`). La colección `cobranzas`
+  se siembra automáticamente al primer listado (o `node scripts/seed-cobranzas.js`).
 
 ### Auth / MongoDB
 
@@ -35,5 +38,6 @@ monorepo, no Docker, and no automated test suite (QA is manual / external Seleni
 ### Notes
 
 - The auth function has its own `package.json` in `netlify/functions/auth/` (only `mongodb`); its deps
-  are installed separately during setup.
+  are installed separately during setup. The cobranzas function mirrors this under
+  `netlify/functions/cobranzas/` (`npm run postinstall` at repo root installs both).
 - Credit-card payment at checkout is **simulated** (client-side only) — no real gateway.

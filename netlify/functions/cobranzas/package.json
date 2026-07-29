@@ -1,0 +1,8 @@
+{
+  "name": "cobranzas-function",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "mongodb": "^6.21.0"
+  }
+}
