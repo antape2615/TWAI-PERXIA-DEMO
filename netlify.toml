@@ -10,6 +10,9 @@
 [functions.auth]
   external_node_modules = ["mongodb"]
 
+[functions.cobranzas]
+  external_node_modules = ["mongodb"]
+
 # API routes → Netlify Functions
 [[redirects]]
   from = "/api/auth/*"
@@ -19,6 +22,16 @@
 [[redirects]]
   from = "/api/auth"
   to = "/.netlify/functions/auth"
+  status = 200
+
+[[redirects]]
+  from = "/api/cobranzas/*"
+  to = "/.netlify/functions/cobranzas/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/cobranzas"
+  to = "/.netlify/functions/cobranzas"
   status = 200
 
 # SPA: todas las demás rutas sirven index.html (React Router)

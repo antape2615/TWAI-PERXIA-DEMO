@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../hooks/useTheme';
+import { isAdminRole } from '../utils/cobranzasLogic';
 import styles from './Layout.module.css';
 
 export default function Layout({ children }) {
@@ -29,6 +30,7 @@ export default function Layout({ children }) {
           {user ? (
             <>
               <Link to="/cuenta">Mi cuenta</Link>
+              {isAdminRole(user) && <Link to="/admin/cobranzas">Cobranzas</Link>}
               <Link to="/carrito" className={styles.cartLink}>
                 Carrito {count > 0 && <span className={styles.badge}>{count}</span>}
               </Link>

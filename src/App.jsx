@@ -9,6 +9,7 @@ import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Account from './pages/Account';
+import Cobranzas from './pages/admin/Cobranzas';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/carrito" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/cuenta" element={<Account />} />
+                <Route path="/admin/cobranzas" element={<Cobranzas />} />
               </Routes>
             </Layout>
           </BrowserRouter>
