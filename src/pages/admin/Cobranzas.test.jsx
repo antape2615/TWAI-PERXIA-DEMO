@@ -48,7 +48,7 @@ describe('Cobranzas — RN-01 acceso', () => {
   it('redirige a login si no hay sesión', () => {
     useAuth.mockReturnValue({ user: null });
     renderCobranzas();
-    expect(screen.queryByText('Gestión de cobranzas')).not.toBeInTheDocument();
+    expect(screen.queryByText('Gestiona tus créditos')).not.toBeInTheDocument();
   });
 });
 
@@ -86,7 +86,7 @@ describe('Cobranzas — admin', () => {
 
     renderCobranzas();
 
-    expect(await screen.findByRole('heading', { name: /Gestión de cobranzas/i })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: /Gestiona tus créditos/i })).toBeInTheDocument();
     expect(await screen.findByText('María López')).toBeInTheDocument();
   });
 

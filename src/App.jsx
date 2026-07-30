@@ -10,6 +10,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Account from './pages/Account';
 import Cobranzas from './pages/admin/Cobranzas';
+import VoiceMobile from './pages/VoiceMobile';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/cuenta" element={<Account />} />
                 <Route path="/admin/cobranzas" element={<Cobranzas />} />
+                <Route path="/voz/:code" element={<VoiceMobile />} />
               </Routes>
             </Layout>
           </BrowserRouter>

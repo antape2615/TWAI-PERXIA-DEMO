@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../hooks/useTheme';
@@ -10,6 +10,8 @@ export default function Layout({ children }) {
   const { count } = useCart();
   const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
+  const isVoiceMobile = location.pathname.startsWith('/voz/');
 
   const handleLogout = () => {
     logout();
@@ -18,6 +20,10 @@ export default function Layout({ children }) {
 
   const isDark = theme === 'dark';
   const nextThemeLabel = isDark ? 'claro' : 'oscuro';
+
+  if (isVoiceMobile) {
+    return <div className={styles.wrapper}>{children}</div>;
+  }
 
   return (
     <div className={styles.wrapper}>

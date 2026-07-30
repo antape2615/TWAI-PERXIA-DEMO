@@ -13,6 +13,9 @@
 [functions.cobranzas]
   external_node_modules = ["mongodb"]
 
+[functions.realtime]
+  # Sin dependencias externas; usa fetch nativo de Node.
+
 # API routes → Netlify Functions
 [[redirects]]
   from = "/api/auth/*"
@@ -32,6 +35,16 @@
 [[redirects]]
   from = "/api/cobranzas"
   to = "/.netlify/functions/cobranzas"
+  status = 200
+
+[[redirects]]
+  from = "/api/realtime/*"
+  to = "/.netlify/functions/realtime/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/realtime"
+  to = "/.netlify/functions/realtime"
   status = 200
 
 # SPA: todas las demás rutas sirven index.html (React Router)

@@ -3,23 +3,28 @@
 ## Cursor Cloud specific instructions
 
 CocinaStore is a single-product **Vite + React 19 SPA** (Spanish kitchen e-commerce demo) with
-**Netlify Functions** (`netlify/functions/auth/auth.js`, `netlify/functions/cobranzas/cobranzas.js`)
-backed by **MongoDB Atlas**. Unit tests: `npm test` (Vitest). Manual QA also uses `casos_prueba_*`
-files / Selenium.
+**Netlify Functions** (`netlify/functions/auth/auth.js`, `netlify/functions/cobranzas/cobranzas.js`,
+`netlify/functions/realtime/realtime.js`) backed by **MongoDB Atlas**. Unit tests: `npm test`
+(Vitest). Manual QA also uses `casos_prueba_*` files / Selenium.
 
 ### Running the app
 
 - **Frontend only:** `npm run dev` (Vite, http://localhost:5173). This is what the README documents,
   but it does **not** serve `/api/auth`, so **login / "Mi cuenta" / full checkout will fail** with a
   connection error.
-- **Full stack (recommended, enables login):** `netlify dev` (serves Vite + the auth function with the
-  `/api/auth/*` redirects on http://localhost:8888). The `netlify-cli` is installed globally during
-  environment setup; its bin dir (`$HOME/.npm-global/bin`) is added to `PATH` via `~/.bashrc`. If
-  `netlify` is not found, run `npm install -g netlify-cli` (the npm prefix is set to `$HOME/.npm-global`
-  so this does not need root). Netlify auto-detects Vite — no extra config needed.
-- **Cobranzas (admin):** route `/admin/cobranzas`, API `/api/cobranzas/*`. Login admin:
-  **admin@cocina.com** / **admin123** (`node scripts/ensure-admin-user.js`). La colección `cobranzas`
-  se siembra automáticamente al primer listado (o `node scripts/seed-cobranzas.js`).
+- **Full stack (recommended, enables login):** `npm run dev:full` — arranca Vite +
+  `scripts/local-api.mjs` (auth/cobranzas/realtime) con proxy `/api` → `http://127.0.0.1:8881`.
+  Abre **http://localhost:5173**. Carga `.env` vía `--env-file`. Esto evita `netlify dev`, que falla
+  en Node 24+/26 con `TypeError: ... 'prototype'`. Opcional: `npm run dev:netlify` si usas Node LTS
+  (22) y tienes `netlify-cli`.
+- **Cobranzas (admin):** route `/admin/cobranzas` («Gestiona tus créditos»), API `/api/cobranzas/*`.
+  Login admin: **admin@cocina.com** / **admin123** (`node scripts/ensure-admin-user.js`). La
+  colección `cobranzas` se siembra automáticamente al primer listado (o `node scripts/seed-cobranzas.js`).
+- **Chatbot de voz (Realtime):** en `/admin/cobranzas`, API `/api/realtime/*`. Requiere
+  `OPENAI_API_KEY` (y opcionalmente `OPENAI_REALTIME_MODEL`, `OPENAI_REALTIME_VOICE`). Usa
+  `npm run dev:full`. **iPhone/Safari:** HTTP en LAN no funciona (exige HTTPS + micrófono). Con
+  el stack corriendo, en otra terminal: `npm run tunnel` (Cloudflare) y abre/escanea la URL
+  `https://….trycloudflare.com`.
 
 ### Auth / MongoDB
 
@@ -38,6 +43,7 @@ files / Selenium.
 ### Notes
 
 - The auth function has its own `package.json` in `netlify/functions/auth/` (only `mongodb`); its deps
-  are installed separately during setup. The cobranzas function mirrors this under
-  `netlify/functions/cobranzas/` (`npm run postinstall` at repo root installs both).
+  are installed separately during setup. The cobranzas and realtime functions mirror this under
+  `netlify/functions/cobranzas/` and `netlify/functions/realtime/` (`npm run postinstall` at repo root
+  installs all three).
 - Credit-card payment at checkout is **simulated** (client-side only) — no real gateway.

@@ -13,6 +13,7 @@ import {
   fetchCobranzaDetalle,
   registrarPago,
 } from '../../utils/cobranzasApi';
+import VoiceAnalysisDashboard from '../../components/VoiceAnalysisDashboard';
 import styles from './Cobranzas.module.css';
 
 const FILTROS = [
@@ -176,8 +177,10 @@ export default function Cobranzas() {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Gestión de cobranzas</h1>
-      <p className={styles.subtitle}>Panel administrativo — deudas pendientes y registro de pagos</p>
+      <h1>Gestiona tus créditos</h1>
+      <p className={styles.subtitle}>
+        Panel administrativo de cobranzas — deudas pendientes, registro de pagos y asistente de voz
+      </p>
 
       {accessDenied && (
         <div className={styles.denied} role="alert">
@@ -408,6 +411,8 @@ export default function Cobranzas() {
       {tab === 'detalle' && !detalle && loading && (
         <p className={styles.loading}>Cargando detalle…</p>
       )}
+
+      <VoiceAnalysisDashboard />
     </div>
   );
 }

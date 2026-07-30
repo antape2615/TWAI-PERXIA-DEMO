@@ -10,7 +10,17 @@ export default defineConfig({
   root: path.resolve(__dirname),
   plugins: [react()],
   server: {
+    host: true,
     strictPort: false,
+    // Túnel Cloudflare / ngrok para iPhone (HTTPS)
+    allowedHosts: ['.trycloudflare.com', '.ngrok-free.app', '.ngrok.io', 'localhost'],
+    proxy: {
+      // API local (scripts/local-api.mjs) — evita depender de `netlify dev` en Node 26+
+      '/api': {
+        target: 'http://127.0.0.1:8881',
+        changeOrigin: true,
+      },
+    },
   },
   test: {
     globals: true,
