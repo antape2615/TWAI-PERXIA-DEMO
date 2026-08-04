@@ -81,7 +81,7 @@
   margin-top: 0.5rem;
   padding: 0.85rem 1.5rem;
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -107,7 +107,7 @@
 .backBtn {
   padding: 0.65rem 1.2rem;
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
   border: none;
   border-radius: 8px;
   font-weight: 500;

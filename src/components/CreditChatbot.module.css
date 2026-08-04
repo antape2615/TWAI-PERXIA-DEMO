@@ -47,9 +47,9 @@
 }
 
 .status_speaking {
-  color: #1e40af;
-  border-color: #93c5fd;
-  background: #eff6ff;
+  color: var(--primary-dark);
+  border-color: var(--accent, #40916c);
+  background: var(--primary-subtle);
 }
 
 .status_connecting {
@@ -89,7 +89,7 @@
 
 .primaryBtn {
   background: var(--accent, #2d6a4f);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .primaryBtn:hover {
@@ -217,7 +217,7 @@
 }
 
 .botLine {
-  border-left: 3px solid var(--primary, #2563eb);
+  border-left: 3px solid var(--primary, #2d6a4f);
 }
 
 @media (max-width: 640px) {
