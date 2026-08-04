@@ -49,7 +49,7 @@
 
 .badge {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
   font-size: 0.75rem;
   padding: 0.15rem 0.45rem;
   border-radius: 999px;
@@ -59,7 +59,7 @@
 
 .loginBtn {
   background: var(--primary);
-  color: white !important;
+  color: var(--on-primary) !important;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }

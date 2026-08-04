@@ -225,7 +225,7 @@
 .viewButtonActive {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: var(--on-primary);
 }
 
 .resultsCount {

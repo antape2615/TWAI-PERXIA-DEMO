@@ -41,7 +41,7 @@
 
 .tabActive {
   background: var(--accent, #2d6a4f);
-  color: #fff;
+  color: var(--on-accent);
   border-color: var(--accent, #2d6a4f);
 }
 
@@ -223,7 +223,7 @@
   border-radius: 8px;
   border: none;
   background: var(--accent, #2d6a4f);
-  color: #fff;
+  color: var(--on-accent);
   cursor: pointer;
   font-size: 0.9rem;
 }
